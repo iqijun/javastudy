@@ -25,6 +25,15 @@ public class MyThread extends  Thread{
         t2.start();
         t3.start();
         t4.start();
-        t4.getId();
+//        try {
+//            String s = testThrowException();
+//        } catch (NullPointerException e) {
+//            String message = e.getMessage();
+//            System.out.println(message);
+//            e.printStackTrace();
+//        }
     }
+//    private static String testThrowException() throws  NullPointerException{
+//        throw  new  NullPointerException("dkkdjk");
+//    }
 }
