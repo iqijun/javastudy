@@ -3,7 +3,7 @@ package com.fullstacker.study.course.thread;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 国美面试题，三个线程依次读取字符串
+ * 国美面试题，三个线程依次读取字符串中的n个字符，并输出
  * 同 ReadString.java
  * @author xingguishuai
  * @create 2017-03-07-11:16
