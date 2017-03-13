@@ -1,4 +1,4 @@
-package com.fullstacker.study.course.thread;
+package com.fullstacker.study.course.concurrent;
 
 /**
  * 多线程访问同一个类的多个对象相同一个方法

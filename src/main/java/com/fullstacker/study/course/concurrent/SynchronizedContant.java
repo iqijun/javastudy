@@ -1,4 +1,4 @@
-package com.fullstacker.study.course.thread;
+package com.fullstacker.study.course.concurrent;
 
 /**
  * 常量做为synchronized的对象

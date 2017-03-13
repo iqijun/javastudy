@@ -1,7 +1,6 @@
-package com.fullstacker.study.course.thread;
+package com.fullstacker.study.course.concurrent;
 
 
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
