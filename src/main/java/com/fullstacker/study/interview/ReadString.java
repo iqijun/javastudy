@@ -1,4 +1,4 @@
-package com.fullstacker.study.course.concurrent;
+package com.fullstacker.study.interview;
 
 
 import java.util.concurrent.atomic.AtomicInteger;

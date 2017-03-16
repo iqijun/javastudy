@@ -8,7 +8,7 @@ package com.fullstacker.study.course.concurrent;
  **/
 public class VolatileVariable extends Thread{
 
-    private /*volatile*/ Integer count = 0;
+    private volatile Integer count = 0;
     public  void addCount(){
         System.out.println(Thread.currentThread().getName()+"：count自增"+count++);
     }
