@@ -15,10 +15,12 @@ public class Test {
 //            i++;
 //            Tprint('D');
 //        }
-        for(System.out.println('a');(i<2);System.out.println('c')){
-            i++;
-            System.out.println('d');
-        }
+//        for(System.out.println('a');(i<2);System.out.println('c')){
+//            i++;
+//            System.out.println('d');
+//        }
+        int a = 1;
+        System.out.println(a^2^2);
     }
 
 }

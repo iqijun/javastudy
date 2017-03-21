@@ -21,6 +21,9 @@ public class RunThread extends Thread{
 		rt.start();
 		Thread.sleep(1000);
 		rt.setRunning(false);
+		Thread.sleep(1000);
+		rt.start();
+
 		System.out.println("isRunning的值已经被设置了false");
 	}
 	

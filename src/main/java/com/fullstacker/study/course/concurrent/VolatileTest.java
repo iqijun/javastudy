@@ -34,7 +34,6 @@ public class VolatileTest {
                         e.printStackTrace();
                     }
                 }
-
                 System.out.println(Thread.currentThread().getName() + ":" + count);
             }
         }, "T1");
