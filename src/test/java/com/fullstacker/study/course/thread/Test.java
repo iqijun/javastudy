@@ -19,8 +19,17 @@ public class Test {
 //            i++;
 //            System.out.println('d');
 //        }
-        int a = 1;
-        System.out.println(a^2^2);
+//        int a = 1;
+//        System.out.println(a^2^2);
+        for (;i<10;i++){
+            System.out.println("外：==========================="+i);
+            for(int j=0;j<10;j++){
+                System.out.println("内j:"+j);
+                if(j==5){
+                    break;
+                }
+            }
+        }
     }
 
 }

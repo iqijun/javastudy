@@ -29,7 +29,6 @@ public class ThreadComunicate {
 //                                e.printStackTrace();
 //                            }
                         }
-
                         if(count > 10){
                             break;
                         }
@@ -40,7 +39,6 @@ public class ThreadComunicate {
         });
         thread.start();
         synchronized(lock){
-
             while (true){
                 System.out.println(Thread.currentThread().getName()+":"+count);
                 count++;
