@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.DelayQueue;
 
 /**
  * 容器类使用
@@ -20,5 +21,7 @@ public class ContainerTest {
         ArrayList<String> list = new ArrayList<String>();
         CopyOnWriteArrayList copyOnWriteArrayList = new CopyOnWriteArrayList();
         copyOnWriteArrayList.add("ad");
+        DelayQueue delayQueue = new DelayQueue();
+
     }
 }
