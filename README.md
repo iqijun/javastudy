@@ -11,3 +11,5 @@
         1.[饿汉模式](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/designpattern/singleton)
         2.懒汉模式
         3.双重检验方式（懒汉模式）
+    二、Future模式
+        1.[博客](http://www.full-stacker.com/archives/271)
