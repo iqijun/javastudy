@@ -16,6 +16,7 @@
 3.双重检验方式（懒汉模式）
 
 4.详细介绍见[博客](http://www.full-stacker.com/archives/256)
+
 二、Future模式
 
 - [博客](http://www.full-stacker.com/archives/271)
