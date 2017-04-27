@@ -8,12 +8,22 @@
 
 # 设计模式
 一、单例模式
+
     1.[饿汉模式](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/designpattern/singleton)
+
     2.懒汉模式
+
     3.双重检验方式（懒汉模式）
+
+    4.详细介绍见[博客](http://www.full-stacker.com/archives/256)
 二、Future模式
+
     1. [博客](http://www.full-stacker.com/archives/271)
+
 三、master-woker模式
+
     1. [博客](http://www.full-stacker.com/archives/274)
+
 四、生产者消费者模式
+
     1. [博客](http://www.full-stacker.com/archives/279)
