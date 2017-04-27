@@ -12,6 +12,10 @@
         2.懒汉模式
         3.双重检验方式（懒汉模式）
     二、Future模式
-        1.[博客](http://www.full-stacker.com/archives/271)
+        1. [博客](http://www.full-stacker.com/archives/271)
     三、master-woker模式
         1. [博客](http://www.full-stacker.com/archives/274)
+    四、生产者消费者模式
+        [A boilerplate for React-Babel-Webpack project](https://github.com/ruanyf/react-babel-webpack-boilerplate)
+        1. [博客](https://github.com/iqijun/javastudy)
+        1. [博客](http://www.full-stacker.com/archives/279)
