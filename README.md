@@ -13,3 +13,5 @@
         3.双重检验方式（懒汉模式）
     二、Future模式
         1.[博客](http://www.full-stacker.com/archives/271)
+    三、master-woker模式
+        1. [博客](http://www.full-stacker.com/archives/274)
