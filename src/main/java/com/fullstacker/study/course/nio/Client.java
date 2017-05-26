@@ -47,12 +47,17 @@ public class Client implements Runnable{
 
 	@Override
 	public void run() {
-		while(true){
+        try {
+            //打开通道
+            sc = SocketChannel.open();
+            //进行连接
+            sc.connect(address);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        while(true){
 			try {
-				//打开通道
-				sc = SocketChannel.open();
-				//进行连接
-				sc.connect(address);
+
 				//定义一个字节数组，然后使用系统录入功能：
 				byte[] bytes = new byte[1024];
                 System.out.println("===========客户端请求输入===================");
@@ -64,13 +69,14 @@ public class Client implements Runnable{
 				writeBuf.flip();
 				//写出数据
 				sc.write(writeBuf);
+                System.out.println("client:remoterAddress"+sc.getRemoteAddress().toString()+"::::localAddress:"+sc.getLocalAddress().toString());
 				//清空缓冲区数据
 				writeBuf.clear();
 
+                System.out.println("============客户端读取信息=================");
                 this.seletor.select();
                 Set<SelectionKey> selectionKeys = this.seletor.selectedKeys();
                 Iterator<SelectionKey> keys = selectionKeys.iterator();
-                System.out.println("============客户端读取信息=================");
                 while (keys.hasNext()){
                     SelectionKey key = keys.next();
                     keys.remove();
@@ -103,7 +109,7 @@ public class Client implements Runnable{
 
 	public static void main(String[] args) {
 
-        new Thread(new Client(8375)).start();
+        new Thread(new Client(8080)).start();
 	}
 
 

@@ -2,6 +2,7 @@ package com.fullstacker.study.course.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
@@ -17,6 +18,10 @@ public class Server implements Runnable{
 	private ByteBuffer readBuf = ByteBuffer.allocate(1024);
 	//3 
 	private ByteBuffer writeBuf = ByteBuffer.allocate(1024);
+
+    InetSocketAddress address = new InetSocketAddress("127.0.0.1", 8080);
+    //声明连接通道
+    SocketChannel sc = null;
 	public Server(int port){
 		try {
 			//1 打开路复用器
@@ -39,7 +44,7 @@ public class Server implements Runnable{
 
 	@Override
 	public void run() {
-		while(true){
+        while(true){
 			try {
 				//1 必须要让多路复用器开始监听
 				this.seletor.select();
@@ -62,7 +67,7 @@ public class Server implements Runnable{
 							this.read(key);
 						}
 						//9 写数据
-						if(key.isWritable()){
+						if(key.isValid() && key.isWritable()){
 							this.write(key); //ssc
 						}
 					}
@@ -75,14 +80,19 @@ public class Server implements Runnable{
 	}
 	
 	private void write(SelectionKey key){
-        try {
-			SocketChannel sc =  (SocketChannel) key.channel();
-			sc.write(writeBuf);
-			writeBuf.clear();
-			//写完之后就不需要再将socketChannel注册到selector上
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            //打开通道
+//            sc = SocketChannel.open();
+//            //进行连接
+//            sc.connect(address);
+//			this.sc.write(writeBuf);
+//            System.out.println("client:remoterAddress"+sc.getRemoteAddress().toString()+"::::localAddress:"+sc.getLocalAddress().toString());
+//            writeBuf.clear();
+//			//写完之后就不需要再将socketChannel注册到selector上
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        System.out.println("do nothing........");
 
     }
 
@@ -113,16 +123,18 @@ public class Server implements Runnable{
 			// 9..可以写回给客户端数据
             byte[] writeByte = new byte[1024];
             System.out.println("================服务端请求输入========================");
+            this.sc = SocketChannel.open();
+            //进行连接
+            this.sc.connect(address);
+            System.out.println("client:remoterAddress"+this.sc.getRemoteAddress().toString()+"::::localAddress:"+this.sc.getLocalAddress().toString());
+
             System.in.read(writeByte);
-             writeBuf.put(writeByte);
+            System.out.println("服务端输入内容："+ new String(writeByte));
+            writeBuf.put(writeByte);
             writeBuf.flip();
 
-            SocketChannel socketChannel = SocketChannel.open();
-            socketChannel.connect(new InetSocketAddress("127.0.0.1", 8375));
-            //将socketChannel置为可写状态
-            socketChannel.configureBlocking(false);
-            socketChannel.register(this.seletor,SelectionKey.OP_WRITE);
-
+            this.sc.write(writeBuf);
+            writeBuf.clear();
         } catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -146,19 +158,7 @@ public class Server implements Runnable{
 	}
 	
 	public static void main(String[] args) {
-		
 		new Thread(new Server(8765)).start();
-//		try {
-//
-//            byte[] bytes = new byte[1024];
-//            while (true){
-//                System.in.read(bytes);
-//                String s = new String(bytes);
-//                System.out.println(s);
-//            }
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
 	}
 	
 	
