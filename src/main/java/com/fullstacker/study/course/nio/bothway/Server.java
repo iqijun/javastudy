@@ -3,9 +3,7 @@ package com.fullstacker.study.course.nio.bothway;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.*;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -21,16 +19,15 @@ public class Server implements  Runnable{
 
     private InetSocketAddress address = null;
 
-    private ByteBuffer readBuffer = ByteBuffer.allocate(1024);
-
     private  Selector selector = null;
 
+    private  SocketChannel socketChannel;
     public Server(int port){
         try {
             //1 打开路复用器
             this.selector = Selector.open();
             //2 打开服务器通道
-            ServerSocketChannel ssc = ServerSocketChannel.open();
+            ssc = ServerSocketChannel.open();
             //3 设置服务器通道为非阻塞模式
             ssc.configureBlocking(false);
             //4 绑定地址
@@ -46,13 +43,15 @@ public class Server implements  Runnable{
 
     @Override
     public void run() {
+        Handle handle = new Handle();
+
         while(true){
             try {
                 //1 必须要让多路复用器开始监听
                 this.selector.select();
                 //2 返回多路复用器已经选择的结果集
                 Iterator<SelectionKey> keys = this.selector.selectedKeys().iterator();
-                Handle handle = new Handle();
+
                 //3 进行遍历
                 while(keys.hasNext()){
                     //4 获取一个选择的元素
@@ -68,6 +67,7 @@ public class Server implements  Runnable{
                         //8 如果为可读状态
                         if(key.isReadable()){
                             handle.read(key);
+                            socketChannel = (SocketChannel) key.channel();
                         }
                         //9 写数据
                         if(key.isValid() && key.isWritable()){
@@ -82,19 +82,20 @@ public class Server implements  Runnable{
         }
     }
 
-    public static void main(String[] args){
+    public void sendMsg(String message)throws IOException{
+        ByteBuffer writeBuffer = ByteBuffer.wrap(message.getBytes("UTF-8"));
+        socketChannel.write(writeBuffer);
+    }
+    public static void main(String[] args) throws IOException {
         Server server = new Server(8888);
         new Thread(server).start();
 
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                Scanner read = new Scanner(System.in);
-                System.out.println("服务端:");
-                String msg = read.next();
-
-            }
-        };
+        Scanner read = new Scanner(System.in);
+        while(true){
+            System.out.println("服务:");
+            String msg = read.next();
+            server.sendMsg(msg);
+        }
     }
 
 }
