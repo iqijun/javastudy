@@ -8,7 +8,7 @@ package com.fullstacker.study.course.concurrent;
  **/
 public class MutiThread {
 
-    public  synchronized void print(String name) throws InterruptedException {
+    public static synchronized void print(String name) throws InterruptedException {
         Integer age;
         if("Tom".equalsIgnoreCase(name)){
             age = 10;
