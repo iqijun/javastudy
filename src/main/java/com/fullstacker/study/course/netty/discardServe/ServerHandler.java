@@ -1,6 +1,7 @@
 package com.fullstacker.study.course.netty.discardServe;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
@@ -12,9 +13,12 @@ public class ServerHandler  extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf buf = (ByteBuf) msg;
-        byte[] bytes = new byte[buf.capacity()];
+        System.out.println("buf.capacity():::"+buf.capacity());
+        System.out.println("buf.readableBytes():::"+buf.readableBytes());
+        byte[] bytes = new byte[buf.readableBytes()];
         buf.readBytes(bytes);
-        System.out.println("server"+bytes);
+        System.out.println("server:"+new String(bytes));
+        ctx.writeAndFlush(Unpooled.wrappedBuffer("洞拐已收到".getBytes()));
     }
 
     @Override

@@ -14,11 +14,10 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class Serve {
 
     public static void main(String[] args){
+        //创建两个线程组，bossGroup负责网络连接，workerGroup负责具体处理
+        NioEventLoopGroup bossGroup = new NioEventLoopGroup();
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
-            //创建两个线程组，bossGroup负责网络连接，workerGroup负责具体处理
-            NioEventLoopGroup bossGroup = new NioEventLoopGroup();
-            NioEventLoopGroup workerGroup = new NioEventLoopGroup();
-
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup,workerGroup)
                     .channel(NioServerSocketChannel.class)
@@ -31,8 +30,12 @@ public class Serve {
 
             ChannelFuture channelFuture = bootstrap.bind(8088).sync();
             channelFuture.channel().closeFuture().sync();
+
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            bossGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
         }
     }
 }

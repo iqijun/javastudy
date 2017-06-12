@@ -3,6 +3,7 @@ package com.fullstacker.study.course.netty.discardServe;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.util.ReferenceCountUtil;
 
 /**
  * @author xingguishuai
@@ -11,10 +12,14 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf buf = (ByteBuf) msg;
-        byte[] bytes = new byte[buf.capacity()];
-        buf.readBytes(bytes);
-        System.out.println("server"+bytes);
+        try {
+            ByteBuf buf = (ByteBuf) msg;
+            byte[] bytes = new byte[buf.readableBytes()];
+            buf.readBytes(bytes);
+            System.out.println("client::"+new String(bytes));
+        } finally {
+            ReferenceCountUtil.release(msg);
+        }
     }
 
     @Override
