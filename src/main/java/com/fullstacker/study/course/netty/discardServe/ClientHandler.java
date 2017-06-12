@@ -18,6 +18,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             buf.readBytes(bytes);
             System.out.println("client::"+new String(bytes));
         } finally {
+            //释放连接
             ReferenceCountUtil.release(msg);
         }
     }

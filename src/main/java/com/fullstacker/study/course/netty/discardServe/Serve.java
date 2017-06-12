@@ -18,17 +18,22 @@ public class Serve {
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
+            //服务端辅助类 ，可以用来配置channel
             ServerBootstrap bootstrap = new ServerBootstrap();
+            //绑定两个线程组
             bootstrap.group(bossGroup,workerGroup)
+                    //设置channel
                     .channel(NioServerSocketChannel.class)
+                    //设置handler用于处理消息，
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(new ServerHandler());
                         }
                     });
-
+            //绑定端口，并返回一个channelFuture（异步）
             ChannelFuture channelFuture = bootstrap.bind(8088).sync();
+            //保持线程运行，相当于Thread.sleep(Integer.MAX_VALUE)
             channelFuture.channel().closeFuture().sync();
 
         } catch (Exception e) {
