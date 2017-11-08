@@ -2,6 +2,7 @@ package com.fullstacker.study.course.netty.discardServe;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
@@ -33,9 +34,10 @@ public class Serve {
                     });
             //绑定端口，并返回一个channelFuture（异步）
             ChannelFuture channelFuture = bootstrap.bind(8088).sync();
-            //保持线程运行，相当于Thread.sleep(Integer.MAX_VALUE)
+            //保持线程运行，直到channel关闭
             channelFuture.channel().closeFuture().sync();
-
+            //
+            channelFuture.addListener(ChannelFutureListener.CLOSE);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

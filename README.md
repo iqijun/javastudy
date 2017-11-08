@@ -6,7 +6,8 @@
 - 实现了客户端向服务端发送信息；
 - 服务端和客户端双向通信暂未实现
 [参考代码](https://github.com/iqijun/javastudy/tree/a3a4fa49df99c0f6a69a29e6692b5ca90f78cee0/src/main/java/com/fullstacker/study/course/nio)
-
+     三、 反射
+  [参考代码](https://github.com/iqijun/javastudy/tree/a3a4fa49df99c0f6a69a29e6692b5ca90f78cee0/src/main/java/com/fullstacker/study/course/reflect)
 # java面试题记录
     一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
          1. printThreadTest.java
@@ -37,4 +38,5 @@
 
 #netty
 一、hello world
+
 1. 实现了服务端与客户端双向通信 [参考代码](https://github.com/iqijun/javastudy/tree/b47bb5c04988c61e660e20c548874ae960211df4/src/main/java/com/fullstacker/study/course/netty/discardServe)
