@@ -32,7 +32,7 @@ public class ThreadJoin {
                     }
                 }
             }
-        });
+        },"t1");
         thread1.start();
         Thread thread2 = new Thread(new Runnable() {
             @Override
@@ -48,7 +48,7 @@ public class ThreadJoin {
                     }
                 }
             }
-        });
+        },"t2");
         thread2.start();
     }
 
