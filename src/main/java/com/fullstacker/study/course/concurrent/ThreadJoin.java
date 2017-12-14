@@ -8,7 +8,8 @@ package com.fullstacker.study.course.concurrent;
  **/
 public class ThreadJoin {
     /**
-    * <p>功能描述：在执行thread2过程中，调用thread1.join()方法后，thread2线程暂停，而后thread1继续执行，待thread1执行完毕thread2继续执行</p>
+    * <p>功能描述：在执行thread2过程中，调用thread1.join()方法后，thread2线程暂停，
+     * 而后thread1继续执行，待thread1执行完毕thread2继续执行</p>
     * @return
     * @param
     * @author xingguishuai
