@@ -14,6 +14,8 @@
     一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
          1. printThreadTest.java
          2. ReadString.java
+    四、 linkedBlockingQueue使用示例
+         1.LinkedBlockingQueue是一个阻塞队列
 
 # 设计模式
 一、单例模式
