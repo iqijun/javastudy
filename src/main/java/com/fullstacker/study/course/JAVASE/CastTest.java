@@ -43,7 +43,7 @@ public class CastTest {
 
 
         //正确转换方式
-        Float f = 1.0f;
+        Float f = 1.20390f;
         Double d = Double.valueOf(String.valueOf(f));
         System.out.println(d);
     }
