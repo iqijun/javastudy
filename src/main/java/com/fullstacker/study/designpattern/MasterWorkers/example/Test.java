@@ -6,7 +6,7 @@ import com.fullstacker.study.designpattern.MasterWorkers.Worker;
 import java.util.Map;
 import java.util.Random;
 
-import static javafx.scene.input.KeyCode.R;
+
 
 /**
  * 测试master worker模式
