@@ -20,67 +20,67 @@ public class VolatileVariable extends Thread{
         System.out.println("count为"+count);
     }
     public static void main(String[] args) throws InterruptedException {
-        //例1
-        VolatileVariable volatileVariable = new VolatileVariable();
-        //启动子线程，执行run方法
-        volatileVariable.start();
-        Thread.sleep(1000);
-        volatileVariable.addCount();
-        Thread.sleep(1000);
-        volatileVariable.addCount();
-        Thread.sleep(1000);
-        volatileVariable.addCount();
+//        //例1
+//        VolatileVariable volatileVariable = new VolatileVariable();
+//        //启动子线程，执行run方法
+//        volatileVariable.start();
+//        Thread.sleep(1000);
+//        volatileVariable.addCount();
+//        Thread.sleep(1000);
+//        volatileVariable.addCount();
+//        Thread.sleep(1000);
+//        volatileVariable.addCount();
 
          //例2
-//        final VolatileVariable volatileVariable = new VolatileVariable();
-//        //线程T1写数据，T2,T3读取修改
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                while (volatileVariable.getCount() < 100){
-//                    volatileVariable.addCount();
-//                    try {
-//                        Thread.sleep(10);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        },"T1").start();
-//
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                while (volatileVariable.getCount() < 100){
-//                    volatileVariable.getCount();
-//                    try {
-//                        Thread.sleep(100);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        },"T2").start();
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                while (volatileVariable.getCount() < 100){
-//                    volatileVariable.getCount();
-//                    try {
-//                        Thread.sleep(10);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        },"T3").start();
-//
-//        int count = 0;
-//        while (count<10){
-//            System.out.println(Thread.currentThread().getName()+":count:"+volatileVariable.getCount());
-//            count++;
-//            Thread.sleep(100);
-//        }
+        final VolatileVariable volatileVariable = new VolatileVariable();
+        //线程T1写数据，T2,T3读取修改
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (volatileVariable.getCount() < 100){
+                    volatileVariable.addCount();
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        },"T1").start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (volatileVariable.getCount() < 100){
+                    volatileVariable.getCount();
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        },"T2").start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (volatileVariable.getCount() < 100){
+                    volatileVariable.getCount();
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        },"T3").start();
+
+        int count = 0;
+        while (count<10){
+            System.out.println(Thread.currentThread().getName()+":count:"+volatileVariable.getCount());
+            count++;
+            Thread.sleep(100);
+        }
     }
     public Integer getCount(){
         System.out.println(Thread.currentThread().getName() + "：读取count："+count);
