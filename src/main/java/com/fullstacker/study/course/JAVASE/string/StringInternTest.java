@@ -6,12 +6,23 @@ package com.fullstacker.study.course.JAVASE.string;
  **/
 public class StringInternTest {
 
+
+    /****
+     *
+     *
+     *
+     * TODO  本方法存在疑问 需继续调试
+     * @param args
+     */
     public static void main(String[] args){
+
+
+
 
         StringBuffer sb1 = new StringBuffer();
         sb1.append("计算机").append("软件");
         String str1 = sb1.toString();
-        System.out.println(str1.intern() == str1); // false
+        System.out.println("str1:"+(str1.intern() == str1)); // false
 
         /****
          *  常量池中为什么会有“java”这个字符串呢？
@@ -22,8 +33,8 @@ public class StringInternTest {
          */
         StringBuffer sb2 = new StringBuffer();
         sb2.append("ja").append("va");
-        String str2 = sb1.toString();
-        System.out.println(str2.intern() == str2); // true
+        String str2 = sb2.toString();
+        System.out.println("str2:"+(str2.intern() == str2)); // true
 
         System.out.println("===========================");
 
@@ -31,11 +42,11 @@ public class StringInternTest {
         String abc1 = new String("abc");
         //在创建abc2时只创建了一个堆中的对象，不再创建常量池中的对象
         String abc2 = new String("abc");
-        System.out.println(abc1 == abc2);
+        System.out.println("1233:"+(abc1 == abc2) );
         System.out.println(abc1.intern() == abc1);
         System.out.println(abc1.intern() == abc2);
         System.out.println(abc1.intern() == abc2.intern());
-
+        System.out.println(abc1+";"+abc2+true);
 
         System.out.println("===========================");
     }
