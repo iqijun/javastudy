@@ -22,5 +22,6 @@ public class BigDecimalTest {
         BigDecimal bigDecimal1 = new BigDecimal(rightQuestionNum / allQuestionNum.floatValue()).setScale(2, BigDecimal.ROUND_HALF_UP);
         System.out.println(bigDecimal1);
 
+
     }
 }
