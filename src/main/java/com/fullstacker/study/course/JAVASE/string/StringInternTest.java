@@ -100,7 +100,7 @@ public class StringInternTest {
 
         StringBuffer sb1 = new StringBuffer();
         sb1.append("计算机").append("软件");
-        String str1 = sb1.toString();
+        String str1 = sb1.toString(); //相当于
         System.out.println("str1:"+(str1.intern() == str1)); // jdk7 true
 
         /****
