@@ -1,23 +1,30 @@
 # java常用技术学习
-     一、 并发知识
-        1. Atomic使用
-        2.
-     二、 NIO
-     三、java基础
-        1. string.intern [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/JAVASE/string/StringInternTest)
+
+ 一、 并发知识
+    1. Atomic使用
+    2.
+ 二、 NIO
+ 三、java基础
+    1. string.intern [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/JAVASE/string/StringInternTest)
+    
 - 实现了客户端向服务端发送信息；
 - 服务端和客户端双向通信暂未实现
 [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/nio)
 
-     三、 反射
+ 三、 反射
 - 简单示例
   [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/reflect)
+
+四、 jvm相关
+   1.  jConsole使用示例
+       [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jconsoleTest)
 # java面试题记录
-    一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
-         1. printThreadTest.java
-         2. ReadString.java
-    四、 linkedBlockingQueue使用示例
-         1.LinkedBlockingQueue是一个阻塞队列
+一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
+   1. printThreadTest.java
+   2. ReadString.java
+   
+二、 linkedBlockingQueue使用示例
+   1. LinkedBlockingQueue是一个阻塞队列
 
 # 设计模式
 一、单例模式
