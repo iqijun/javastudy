@@ -1,11 +1,12 @@
 # java常用技术学习
 
  一、 并发知识
-    1. Atomic使用
-    2.
+   1. Atomic使用
+   2.
  二、 NIO
+ 
  三、java基础
-    1. string.intern [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/JAVASE/string/StringInternTest)
+   1. string.intern [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/JAVASE/string/StringInternTest)
     
 - 实现了客户端向服务端发送信息；
 - 服务端和客户端双向通信暂未实现
