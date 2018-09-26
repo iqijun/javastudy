@@ -1,4 +1,4 @@
-package com.fullstacker.study.course.JAVASE;
+package com.fullstacker.study.course.other;
 
 /**
  * 强制类型转换测试

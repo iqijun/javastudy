@@ -1,4 +1,4 @@
-package com.fullstacker.study.course.JAVASE;
+package com.fullstacker.study.course.other;
 
 /**
  * 方法传值测试

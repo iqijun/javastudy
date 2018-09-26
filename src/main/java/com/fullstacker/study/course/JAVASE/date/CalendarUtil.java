@@ -1,4 +1,4 @@
-package com.fullstacker.study.course.JAVASE;
+package com.fullstacker.study.course.JAVASE.date;
 
 import java.util.Calendar;
 import java.util.Date;
