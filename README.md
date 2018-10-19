@@ -19,6 +19,10 @@
 四、 jvm相关
    1.  jConsole使用示例
        [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jconsoleTest)
+   2. classLoader示例
+        [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jvm/ClassLoaderTest.java)
+   3. 类初始化(clinit)示例
+        [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jvm/ClinitTest.java)
 # java面试题记录
 一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
    1. printThreadTest.java
