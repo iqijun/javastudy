@@ -36,7 +36,7 @@
 
 1.[饿汉模式](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/designpattern/singleton)
 
-2.懒汉模式
+2.懒汉模式UGV
 
 3.双重检验方式（懒汉模式）
 
