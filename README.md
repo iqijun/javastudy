@@ -23,6 +23,11 @@
         [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jvm/ClassLoaderTest.java)
    3. 类初始化(clinit)示例
         [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jvm/ClinitTest.java)
+   4. 动态代理示例
+        [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jvm/DynmicProxyTest.java)
+        
+        需要注意的是在使用System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");保存生成的动态代理类时，代理类默认保存在user.dir目录中，
+        如果目录不存在需要手动创建否则会产生FileNotFundException
 # java面试题记录
 一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
    1. printThreadTest.java
