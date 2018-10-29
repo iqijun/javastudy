@@ -28,6 +28,10 @@
         
         需要注意的是在使用System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");保存生成的动态代理类时，代理类默认保存在user.dir目录中，
         如果目录不存在需要手动创建否则会产生FileNotFundException
+   5. if条件编译
+     [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jvm/IfComplieTest.java)
+    
+        在编译期间就会执行if判断去除掉不能到达的条件分支 ，因此编译后这个条件分支会消失
 # java面试题记录
 一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
    1. printThreadTest.java
