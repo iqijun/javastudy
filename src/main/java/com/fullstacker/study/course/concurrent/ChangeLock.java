@@ -14,8 +14,9 @@ public class ChangeLock {
         synchronized (lock) {
             try {
                 System.out.println("当前线程 : "  + Thread.currentThread().getName() + "开始");
+                //lock改变了  锁不起作用了 t2会在锁改变的时候就开始执行了
                 lock = "change lock";
-                Thread.sleep(2000);
+                Thread.sleep(5000);
                 System.out.println("当前线程 : "  + Thread.currentThread().getName() + "结束");
             } catch (InterruptedException e) {
                 e.printStackTrace();
