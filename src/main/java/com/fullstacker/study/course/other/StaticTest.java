@@ -16,7 +16,12 @@ package com.fullstacker.study.course.other;
  * 5. 自身成员变量赋值和自身块赋值
  * 6. 自身构造函数赋值
  *
- * 在这个
+ * 在这个列子中会先初始化StaticTest类的静态变量，首先是st变量，但st变量是该类的一个个对象，所以此时会将对象的初始化嵌套到静态变量初始化
+ * ，初始化这个变量时，会先执行代码块2 ，然后初始化变量a=110,初始化完成后执行构造函数，在执行构造函数时，a变量已经被初始化，但StaticTest类的
+ * 静态变量b还未初始化，所以输出a=110, b=0;
+ * 完成st变量的初始化后，执行静态代码块1 ，然后运行staticFunction方法
+ *
+ *
  */
 public class StaticTest {
     public static void main(String[] args)
@@ -25,12 +30,12 @@ public class StaticTest {
     }
 
     static StaticTest st = new StaticTest();
-
+    // 静态代码块1
     static
     {
         System.out.println("1");
     }
-
+    // 代码块2
     {
         System.out.println("2");
     }
