@@ -32,6 +32,9 @@
      [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/jvm/IfComplieTest.java)
     
         在编译期间就会执行if判断去除掉不能到达的条件分支 ，因此编译后这个条件分支会消失
+        
+五、常见算法实现    
+    1. 快速排序  [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/algorithm/QuickSort.java)    
 # java面试题记录
 一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
    1. printThreadTest.java
