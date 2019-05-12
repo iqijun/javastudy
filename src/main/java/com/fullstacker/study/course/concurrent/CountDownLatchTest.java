@@ -1,7 +1,5 @@
 package com.fullstacker.study.course.concurrent;
 
-import com.fullstacker.study.designpattern.future.Main;
-
 import java.util.concurrent.CountDownLatch;
 
 /**
