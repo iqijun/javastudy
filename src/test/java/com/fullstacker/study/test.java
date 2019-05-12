@@ -1,6 +1,7 @@
 package com.fullstacker.study;
 
 
+import java.util.ArrayList;
 
 /**
  * @author xingguishuai
@@ -16,6 +17,13 @@ public class test {
     * @since 1.0
     */
     public static void main(String[] args){
+        ArrayList<Long> longs = new ArrayList<>();
+        for (int i = 0; i < longs.size(); i++) {
+            System.out.println("i = " + i);
+            System.out.println("test.main");
+            System.out.println("args = [" + args + "]");
+
+        }
 
     }
 }

@@ -36,5 +36,6 @@ public class ThreadYeild {
         },"t1");
         thread1.setPriority(Thread.MAX_PRIORITY);
         thread1.start();
+
     }
 }
