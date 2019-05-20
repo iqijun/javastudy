@@ -40,7 +40,9 @@
 1. CountDownLatch使用示例[参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/concurrent/CountDownLatchTest.java)
 2. CyclicBarrier使用示例    [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/concurrent/CyclicBarrierTest.java)
 3. Semaphore使用示例    [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/concurrent/SemaphoreTest.java)
-3. 多条件锁的使用示例    [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/concurrent/ReentrantLockDemo.java)
+4. 多条件锁的使用示例    [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/concurrent/ReentrantLockDemo.java)
+5. Atomic原子引用使用示例[参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/concurrent/AtomicRefDemo.java)
+5. 带stamp的原子引用使用示例[参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/concurrent/AtomicStampedReferenceDemo.java)
 
 # java面试题记录
 一、 国美面试题，三个线程依次读取字符串中的n个字符，并输出
