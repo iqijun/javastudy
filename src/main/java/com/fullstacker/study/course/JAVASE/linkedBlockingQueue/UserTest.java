@@ -10,5 +10,7 @@ public class UserTest {
 	userProducer.start();
 	   UserConsumer userConsumer=new UserConsumer(linkedUserList);
 	userConsumer.start();
+
+
 }
 }
