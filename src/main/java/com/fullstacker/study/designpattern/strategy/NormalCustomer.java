@@ -6,7 +6,7 @@ package com.fullstacker.study.designpattern.strategy;
  * @author: xingguishuai
  * @create: 2019-07-28 22:26
  */
-public class CustomerNormal implements Strategy {
+public class NormalCustomer implements Strategy {
 
 
     @Override

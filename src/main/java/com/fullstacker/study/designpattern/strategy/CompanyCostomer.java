@@ -6,5 +6,11 @@ package com.fullstacker.study.designpattern.strategy;
  * @author: xingguishuai
  * @create: 2019-07-28 22:33
  */
-public class CompanyCostomer {
+public class CompanyCostomer implements Strategy{
+
+    @Override
+    public Double quotePrice() {
+        System.out.println("我是大客户，这个商品对我7折销售");
+        return 700d;
+    }
 }

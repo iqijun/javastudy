@@ -17,7 +17,22 @@ public class TransValueTest {
         int baseType = 1 ;
         Integer objType = 12;
         transValueTest.transValue(baseType,objType);
-        System.out.println("baseT:"+baseType);
-        System.out.println("objType:"+objType);
+//        System.out.println("baseT:"+baseType);
+//        System.out.println("objType:"+objType);
+//        String s = null + "str";
+//        System.out.println(s);
+//        System.out.println(null +"str");
+
+//        ArrayList<Object> list = Lists.newArrayList();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//        list.add(4);
+//       System.out.println(StringUtils.join(list.toArray(), "_"));
+
+        boolean equals = Integer.valueOf(Integer.MAX_VALUE).equals(null);
+        System.out.println(equals);
+//        Calendar calendar = Calendar.getInstance();
+//        System.out.println(calendar.get(Calendar.WEEK_OF_YEAR));
     }
 }
