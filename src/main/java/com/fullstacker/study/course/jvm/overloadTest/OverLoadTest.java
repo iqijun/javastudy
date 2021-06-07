@@ -36,22 +36,21 @@ public class OverLoadTest {
         System.out.println("strList Method");
         return 1;
     }*/
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 23, 4, 5);
 
-   public static  void main(String[] args){
-    List<Integer> list = Arrays.asList(1,23,4,5);
-
-    Integer a = 1;
-    Integer b = 2;
-    Integer c = 3;
-    Integer d = 3;
-    Integer e = 127;//127为界限
-    Integer f = 127;
-    Long g = 3L;
-    System.out.println(c == d);
-    System.out.println(e == f);
-    System.out.println(c == (a+b));
-    System.out.println(c.equals(a+b));
-    System.out.println(g == (a+b)); //TRUE
-   System.out.println(g.equals(a+b));//false
-   }
+        Integer a = 1;
+        Integer b = 2;
+        Integer c = 3;
+        Integer d = 3;
+        Integer e = 127;//127为界限
+        Integer f = 127;
+        Long g = 3L;
+        System.out.println(c == d);
+        System.out.println(e == f);
+        System.out.println(c == (a + b));
+        System.out.println(c.equals(a + b));
+        System.out.println(g == (a + b)); //TRUE
+        System.out.println(g.equals(a + b));//false
+    }
 }

@@ -13,16 +13,17 @@ import java.util.Scanner;
  * @author xingguishuai
  * @create 2017-05-24-10:21
  **/
-public class Server implements  Runnable{
+public class Server implements Runnable {
 
     private ServerSocketChannel ssc = null;
 
     private InetSocketAddress address = null;
 
-    private  Selector selector = null;
+    private Selector selector = null;
 
-    private  SocketChannel socketChannel;
-    public Server(int port){
+    private SocketChannel socketChannel;
+
+    public Server(int port) {
         try {
             //1 打开路复用器
             this.selector = Selector.open();
@@ -45,7 +46,7 @@ public class Server implements  Runnable{
     public void run() {
         Handle handle = new Handle();
 
-        while(true){
+        while (true) {
             try {
                 //1 必须要让多路复用器开始监听
                 this.selector.select();
@@ -53,25 +54,25 @@ public class Server implements  Runnable{
                 Iterator<SelectionKey> keys = this.selector.selectedKeys().iterator();
 
                 //3 进行遍历
-                while(keys.hasNext()){
+                while (keys.hasNext()) {
                     //4 获取一个选择的元素
                     SelectionKey key = keys.next();
                     //5 直接从容器中移除就可以了
                     keys.remove();
                     //6 如果是有效的
-                    if(key.isValid()){
+                    if (key.isValid()) {
                         //7 如果为阻塞状态
-                        if(key.isAcceptable()){
+                        if (key.isAcceptable()) {
                             handle.accept(key);
                         }
                         //8 如果为可读状态
-                        if(key.isReadable()){
+                        if (key.isReadable()) {
                             handle.read(key);
                             socketChannel = (SocketChannel) key.channel();
                         }
                         //9 写数据
-                        if(key.isValid() && key.isWritable()){
-                            handle.write(key,"这是服务器发出的信息");
+                        if (key.isValid() && key.isWritable()) {
+                            handle.write(key, "这是服务器发出的信息");
                         }
                     }
 
@@ -82,16 +83,17 @@ public class Server implements  Runnable{
         }
     }
 
-    public void sendMsg(String message)throws IOException{
+    public void sendMsg(String message) throws IOException {
         ByteBuffer writeBuffer = ByteBuffer.wrap(message.getBytes("UTF-8"));
         socketChannel.write(writeBuffer);
     }
+
     public static void main(String[] args) throws IOException {
         Server server = new Server(8888);
         new Thread(server).start();
 
         Scanner read = new Scanner(System.in);
-        while(true){
+        while (true) {
             System.out.println("服务:");
             String msg = read.next();
             server.sendMsg(msg);

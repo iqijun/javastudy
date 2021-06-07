@@ -6,7 +6,7 @@ package com.fullstacker.study.designpattern.strategy;
  * @author: xingguishuai
  * @create: 2019-07-28 22:33
  */
-public class CompanyCostomer implements Strategy{
+public class CompanyCostomer implements Strategy {
 
     @Override
     public Double quotePrice() {

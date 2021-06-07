@@ -16,27 +16,27 @@ import java.util.List;
  */
 public class QuickSort {
 
-    public  static List<?> sort(List<? extends Number> list){
+    public static List<?> sort(List<? extends Number> list) {
 
-        if(CollectionUtils.isEmpty(list)){
-            return  list;
+        if (CollectionUtils.isEmpty(list)) {
+            return list;
         }
-        if(list.size() < 2){
-            return  list;
+        if (list.size() < 2) {
+            return list;
         }
 
         Number baseValue = list.get(0);
         list.remove(baseValue);
 
         List<Number> lessList = new ArrayList<>();
-        List< Number> moreList = new ArrayList<>();
+        List<Number> moreList = new ArrayList<>();
         List<Number> equalList = Lists.newArrayList();
         for (Number number : list) {
-            if(number.doubleValue() > baseValue.doubleValue()){
+            if (number.doubleValue() > baseValue.doubleValue()) {
                 moreList.add(number);
-            }else if(number.doubleValue() < baseValue.doubleValue()){
+            } else if (number.doubleValue() < baseValue.doubleValue()) {
                 lessList.add(number);
-            }else{
+            } else {
                 equalList.add(number);
             }
         }
@@ -51,7 +51,7 @@ public class QuickSort {
 
     }
 
-    public static  void main(String[] args){
+    public static void main(String[] args) {
         ArrayList<Integer> list = Lists.newArrayList();
         list.add(39);
         list.add(3);

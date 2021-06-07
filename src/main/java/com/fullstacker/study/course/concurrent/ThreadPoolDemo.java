@@ -11,7 +11,7 @@ import java.util.concurrent.*;
 public class ThreadPoolDemo {
 
 
-    public static  void main(String[] args) throws ExecutionException, InterruptedException {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
                 19,

@@ -10,17 +10,18 @@ public class SynchronizedContant {
     int i = 0;
 
 
-    public  void synchronizedContantMethod() throws InterruptedException {
+    public void synchronizedContantMethod() throws InterruptedException {
         String lock = new String("123");
-        synchronized (lock){
-            while(true){
+        synchronized (lock) {
+            while (true) {
                 Thread.sleep(1000);
-                System.out.println("Thread name:"+Thread.currentThread().getName());
+                System.out.println("Thread name:" + Thread.currentThread().getName());
                 i++;
             }
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         final SynchronizedContant synchronizedContant1 = new SynchronizedContant();
         final SynchronizedContant synchronizedContant2 = new SynchronizedContant();
 
@@ -32,7 +33,7 @@ public class SynchronizedContant {
                     e.printStackTrace();
                 }
             }
-        },"t1");
+        }, "t1");
         Thread thread2 = new Thread(new Runnable() {
             public void run() {
                 try {
@@ -41,7 +42,7 @@ public class SynchronizedContant {
                     e.printStackTrace();
                 }
             }
-        },"t2");
+        }, "t2");
         thread1.start();
         thread2.start();
     }

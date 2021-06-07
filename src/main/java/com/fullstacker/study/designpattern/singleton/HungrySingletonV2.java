@@ -8,15 +8,16 @@ package com.fullstacker.study.designpattern.singleton;
  */
 public class HungrySingletonV2 {
 
-    private HungrySingletonV2(){}
-
-    public HungrySingletonV2 getInstance(){
-
-        return  Nested.instance;
+    private HungrySingletonV2() {
     }
 
-    private static class  Nested{
+    public HungrySingletonV2 getInstance() {
 
-       private static final HungrySingletonV2 instance = new HungrySingletonV2();
+        return Nested.instance;
+    }
+
+    private static class Nested {
+
+        private static final HungrySingletonV2 instance = new HungrySingletonV2();
     }
 }

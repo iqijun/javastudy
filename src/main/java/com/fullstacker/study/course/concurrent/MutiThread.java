@@ -10,18 +10,18 @@ public class MutiThread {
 
     public static synchronized void print(String name) throws InterruptedException {
         Integer age;
-        if("Tom".equalsIgnoreCase(name)){
+        if ("Tom".equalsIgnoreCase(name)) {
             age = 10;
             System.out.println("name:" + name + " has set age");
             Thread.sleep(1000);
-        }else{
+        } else {
             age = 5;
             System.out.println("name:" + name + " has set age");
         }
         System.out.println("name:" + name + " age:" + age);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         final MutiThread m1 = new MutiThread();
         final MutiThread m2 = new MutiThread();
 

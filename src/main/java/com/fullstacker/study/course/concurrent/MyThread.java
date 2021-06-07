@@ -6,16 +6,16 @@ package com.fullstacker.study.course.concurrent;
  * @author xingguishuai
  * @create 2017-02-27-10:04
  **/
-public class MyThread extends  Thread{
+public class MyThread extends Thread {
 
-    private  Integer count = 5;
+    private Integer count = 5;
 
-    public synchronized void run(){
+    public synchronized void run() {
         count--;
         System.out.println(Thread.currentThread().getName() + ":" + count);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         MyThread myThread = new MyThread();
         Thread t1 = new Thread(myThread, "T1");
         Thread t2 = new Thread(myThread, "T2");

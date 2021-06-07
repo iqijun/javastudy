@@ -8,7 +8,7 @@ package com.fullstacker.study.course.reflect;
  */
 public class RelfelctLong {
 
-    public static  void main(String[] args){
+    public static void main(String[] args) {
         Class<?> classType = null;
         try {
             classType = Class.forName(String.class.getName());

@@ -10,7 +10,7 @@ import java.util.concurrent.Semaphore;
  */
 public class SemaphoreTest {
 
-    public static  void main(String[] args){
+    public static void main(String[] args) {
 
         final Semaphore semaphore = new Semaphore(3);//有3个停车位
 
@@ -22,17 +22,17 @@ public class SemaphoreTest {
                 public void run() {
                     try {
                         semaphore.acquire(); //抢到停车位
-                        System.out.println("thread_"+ finalI+"抢到车位");
+                        System.out.println("thread_" + finalI + "抢到车位");
                         Thread.sleep(3000);
-                        System.out.println("thread_"+ finalI+"离开车位");
+                        System.out.println("thread_" + finalI + "离开车位");
 
                     } catch (InterruptedException e) {
                         e.printStackTrace();
-                    }finally{
-                      semaphore.release();   //释放停车位
+                    } finally {
+                        semaphore.release();   //释放停车位
                     }
                 }
-            },"thread_"+i).start();
+            }, "thread_" + i).start();
         }
 
 

@@ -8,14 +8,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * @author: xingguishuai
  * @create: 2019-02-28 17:19
  */
-@Document(collection="#{@collectionNameProvider.getCollectionName(#root)}")
+@Document(collection = "#{@collectionNameProvider.getCollectionName(#root)}")
 public class TestMongoCollection {
 
     private String id;
 
     private String name;
 
-    private  int  age;
+    private int age;
 
     public String getId() {
         return id;

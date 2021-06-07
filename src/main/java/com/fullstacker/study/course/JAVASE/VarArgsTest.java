@@ -24,7 +24,7 @@ public class VarArgsTest {
         VarArgsTest test = new VarArgsTest();
 //        test.print("hello");
 //        test.print("hello", "alexia");
-        test.print(new String []{"1234","10040"});
+        test.print(new String[]{"1234", "10040"});
 
         ReentrantLock reentrantLock = new ReentrantLock();
         reentrantLock.lock();

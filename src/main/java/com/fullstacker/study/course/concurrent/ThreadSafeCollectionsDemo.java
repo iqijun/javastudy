@@ -13,20 +13,20 @@ import java.util.concurrent.CopyOnWriteArraySet;
  * 怎么保证集合类的线程安全
  * 1. 使用synchronized关键字
  * 2. 使用Collections提供的工具方法保证线程安全，底层还是使用Synchronized关键字
- *         Collections.synchronizedCollection(list)
- *          Collections.synchronizedList()
- *         Collections.synchronizedSet();
- *         Collections.synchronizedMap();
+ * Collections.synchronizedCollection(list)
+ * Collections.synchronizedList()
+ * Collections.synchronizedSet();
+ * Collections.synchronizedMap();
  * 3. 使用juc包中的提供的集合类：
- *        CopyOnWriteArrayList
- *         CopyOnWriteArraySet
- *         ConcurrentHashMap
+ * CopyOnWriteArrayList
+ * CopyOnWriteArraySet
+ * ConcurrentHashMap
  * @author: xingguishuai
  * @create: 2019-05-25 16:32
  */
 public class ThreadSafeCollectionsDemo {
 
-    public static  void main(String[] args){
+    public static void main(String[] args) {
         ArrayList<Object> list = new ArrayList<>();
         Collection<Object> objects = Collections.synchronizedCollection(list);
 

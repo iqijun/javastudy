@@ -10,17 +10,17 @@ import java.util.concurrent.CountDownLatch;
  */
 public class CountDownLatchTest {
 
-    public static  void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         final CountDownLatch countDownLatch = new CountDownLatch(10);
         for (int i = 0; i < 10; i++) {
             final int finalI = i;
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println("i am thread_"+ finalI);
+                    System.out.println("i am thread_" + finalI);
                     countDownLatch.countDown();
                 }
-            },"thread_"+i);
+            }, "thread_" + i);
             thread.start();
         }
         //阻塞线程

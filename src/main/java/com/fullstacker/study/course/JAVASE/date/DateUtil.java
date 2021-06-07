@@ -61,8 +61,8 @@ public final class DateUtil {
     }
 
     public static String minutesToHours(Integer minutes) {
-        double ret = (double)(minutes.intValue() / 60);
-        ret += (double)(minutes.intValue() % 60) / 60.0D;
+        double ret = (double) (minutes.intValue() / 60);
+        ret += (double) (minutes.intValue() % 60) / 60.0D;
         DecimalFormat df = new DecimalFormat("###.0");
         return df.format(ret);
     }
@@ -85,7 +85,7 @@ public final class DateUtil {
     }
 
     public static String dateToStr(Date date, String format) {
-        if(date == null) {
+        if (date == null) {
             return "";
         } else {
             SimpleDateFormat dateToStr = new SimpleDateFormat(format);
@@ -106,7 +106,7 @@ public final class DateUtil {
     }
 
     public static Date strToDate(String dateStr) {
-        if(dateStr != null && dateStr.length() >= 8) {
+        if (dateStr != null && dateStr.length() >= 8) {
             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             Date date = null;
 
@@ -123,8 +123,8 @@ public final class DateUtil {
     }
 
     public static Date strToTime(String timeStr) {
-        if(timeStr != null && timeStr.length() >= 8) {
-            if(timeStr.length() < 12) {
+        if (timeStr != null && timeStr.length() >= 8) {
+            if (timeStr.length() < 12) {
                 timeStr = timeStr + " 00:00:00";
             }
 
@@ -145,15 +145,15 @@ public final class DateUtil {
 
     public static long daysLeftTo(String fromDateStr, String toDateStr) {
 //        return StringUtils.isNotEmpty(fromDateStr) && StringUtils.isNotEmpty(toDateStr)?Long.parseLong(CalendarUtil.getTwoDay(toDateStr, fromDateStr)):0L;
-        return  1L;
+        return 1L;
     }
 
     public static long daysLeftTo(Date fromDate, Date toDate) {
-        return fromDate != null && toDate != null?(toDate.getTime() - fromDate.getTime()) / MILLISECONDS_IN_DAY:0L;
+        return fromDate != null && toDate != null ? (toDate.getTime() - fromDate.getTime()) / MILLISECONDS_IN_DAY : 0L;
     }
 
     public static long minutesLeftTo(Date fromDate, Date toDate) {
-        return fromDate != null && toDate != null?(toDate.getTime() - fromDate.getTime()) / MILLISECONDS_IN_MINUTE:0L;
+        return fromDate != null && toDate != null ? (toDate.getTime() - fromDate.getTime()) / MILLISECONDS_IN_MINUTE : 0L;
     }
 
     public static Double daysLeftTo(Date toDate) {
@@ -162,7 +162,7 @@ public final class DateUtil {
         Double days = Double.valueOf(0.0D);
 
         try {
-            days = Double.valueOf(Long.valueOf(toDate.getTime() - d.parse(nowtime).getTime()).doubleValue() / (double)MILLISECONDS_IN_DAY);
+            days = Double.valueOf(Long.valueOf(toDate.getTime() - d.parse(nowtime).getTime()).doubleValue() / (double) MILLISECONDS_IN_DAY);
         } catch (ParseException var5) {
             var5.getMessage();
         }
@@ -171,7 +171,7 @@ public final class DateUtil {
     }
 
     public static Long calMinutesPassed(Date from) {
-        return from == null?Long.valueOf(0L):Long.valueOf(((new Date()).getTime() - from.getTime()) / MILLISECONDS_IN_MINUTE);
+        return from == null ? Long.valueOf(0L) : Long.valueOf(((new Date()).getTime() - from.getTime()) / MILLISECONDS_IN_MINUTE);
     }
 
     public static int compDate(String s1, String s2) {
@@ -181,7 +181,7 @@ public final class DateUtil {
         try {
             Date e = sf.parse(s1);
             Date date2 = sf.parse(s2);
-            day = (int)((date2.getTime() - e.getTime()) / MILLISECONDS_IN_DAY);
+            day = (int) ((date2.getTime() - e.getTime()) / MILLISECONDS_IN_DAY);
         } catch (Exception var6) {
             var6.getMessage();
         }
@@ -255,7 +255,7 @@ public final class DateUtil {
 
     public static Timestamp parseTimestamp(String timeStr) {
         Date d = strToTime(timeStr);
-        return d != null?new Timestamp(d.getTime()):null;
+        return d != null ? new Timestamp(d.getTime()) : null;
     }
 
     public static Timestamp getCurrentDayStart() {
@@ -309,20 +309,22 @@ public final class DateUtil {
         MILLISECONDS_IN_DAY = HOURS_IN_DAY.longValue() * MILLISECONDS_IN_HOUR;
         MILLISECONDS_IN_WEEK = DAYS_IN_WEEK.longValue() * MILLISECONDS_IN_DAY;
     }
+
     /**
      * 根据时间获取年周次（该时间所在的周是本年度的第几个星期）
+     *
      * @return 格式：201730
      */
-    public static Integer getWeekOfYear(Date date){
+    public static Integer getWeekOfYear(Date date) {
 
-        Calendar c=Calendar.getInstance();
+        Calendar c = Calendar.getInstance();
         c.setTime(date);
         c.setFirstDayOfWeek(Calendar.MONDAY);//设置一周的第一天是星期一
         int year = c.get(Calendar.YEAR);
         int weekOfYear = c.get(Calendar.WEEK_OF_YEAR);
-        DecimalFormat df=new DecimalFormat("00");
-        String str2=df.format(weekOfYear);
-        return Integer.parseInt(year+""+str2);
+        DecimalFormat df = new DecimalFormat("00");
+        String str2 = df.format(weekOfYear);
+        return Integer.parseInt(year + "" + str2);
     }
 
 
@@ -332,7 +334,7 @@ public final class DateUtil {
         Integer startweekOfYear = getWeekOfYear(start);
         System.out.println(startweekOfYear);
         Date end = dateFormat.parse("2018-01-01");
-         Integer endweekOfYear = getWeekOfYear(end);
+        Integer endweekOfYear = getWeekOfYear(end);
         System.out.println(endweekOfYear);
     }
 }

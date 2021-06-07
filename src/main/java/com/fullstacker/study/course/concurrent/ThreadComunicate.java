@@ -14,22 +14,23 @@ public class ThreadComunicate {
 
         Thread thread = new Thread(new Runnable() {
             int count = 0;
+
             @Override
             public void run() {
                 while (true) {
                     synchronized (lock) {
-                        System.out.println(Thread.currentThread().getName() + ":子线程:"+count);
+                        System.out.println(Thread.currentThread().getName() + ":子线程:" + count);
 
                         count++;
-                        if(count==5){
-                                lock.notify();
+                        if (count == 5) {
+                            lock.notify();
 //                            try {
 //                                lock.wait();
 //                            } catch (InterruptedException e) {
 //                                e.printStackTrace();
 //                            }
                         }
-                        if(count > 10){
+                        if (count > 10) {
                             break;
                         }
                     }
@@ -38,14 +39,14 @@ public class ThreadComunicate {
             }
         });
         thread.start();
-        synchronized(lock){
-            while (true){
-                System.out.println(Thread.currentThread().getName()+":"+count);
+        synchronized (lock) {
+            while (true) {
+                System.out.println(Thread.currentThread().getName() + ":" + count);
                 count++;
-                if(count==5){
+                if (count == 5) {
                     lock.wait();
                 }
-                if(count>10){
+                if (count > 10) {
                     break;
                 }
             }

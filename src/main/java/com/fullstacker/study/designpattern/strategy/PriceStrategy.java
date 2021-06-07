@@ -8,13 +8,13 @@ package com.fullstacker.study.designpattern.strategy;
  */
 public class PriceStrategy {
 
-    private  Strategy strategy;
+    private Strategy strategy;
 
-    public  PriceStrategy(Strategy strategy){
+    public PriceStrategy(Strategy strategy) {
         this.strategy = strategy;
     }
 
-    public  double quotePriceByCustomerType(){
+    public double quotePriceByCustomerType() {
         return strategy.quotePrice();
     }
 }

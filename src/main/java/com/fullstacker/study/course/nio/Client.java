@@ -10,22 +10,23 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Client implements Runnable{
+public class Client implements Runnable {
 
-	//1 多路复用器（管理所有的通道）
-	private Selector seletor;
+    //1 多路复用器（管理所有的通道）
+    private Selector seletor;
 
-    InetSocketAddress address = new InetSocketAddress("127.0.0.1", 8765);;
+    InetSocketAddress address = new InetSocketAddress("127.0.0.1", 8765);
+    ;
 
     //声明连接通道
-	SocketChannel sc = null;
+    SocketChannel sc = null;
 
-	//建立缓冲区
-	ByteBuffer writeBuf = ByteBuffer.allocate(1024);
+    //建立缓冲区
+    ByteBuffer writeBuf = ByteBuffer.allocate(1024);
 
-	ByteBuffer readBuf = ByteBuffer.allocate(1024);
+    ByteBuffer readBuf = ByteBuffer.allocate(1024);
 
-    public Client(int port){
+    public Client(int port) {
         //创建连接的地址
         try {
             this.seletor = Selector.open();
@@ -45,8 +46,8 @@ public class Client implements Runnable{
 
     }
 
-	@Override
-	public void run() {
+    @Override
+    public void run() {
         try {
             //打开通道
             sc = SocketChannel.open();
@@ -55,67 +56,67 @@ public class Client implements Runnable{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        while(true){
-			try {
+        while (true) {
+            try {
 
-				//定义一个字节数组，然后使用系统录入功能：
-				byte[] bytes = new byte[1024];
+                //定义一个字节数组，然后使用系统录入功能：
+                byte[] bytes = new byte[1024];
                 System.out.println("===========客户端请求输入===================");
-				System.in.read(bytes);
+                System.in.read(bytes);
 
-				//把数据放到缓冲区中
-				writeBuf.put(bytes);
-				//对缓冲区进行复位
-				writeBuf.flip();
-				//写出数据
-				sc.write(writeBuf);
-                System.out.println("client:remoterAddress"+sc.getRemoteAddress().toString()+"::::localAddress:"+sc.getLocalAddress().toString());
-				//清空缓冲区数据
-				writeBuf.clear();
+                //把数据放到缓冲区中
+                writeBuf.put(bytes);
+                //对缓冲区进行复位
+                writeBuf.flip();
+                //写出数据
+                sc.write(writeBuf);
+                System.out.println("client:remoterAddress" + sc.getRemoteAddress().toString() + "::::localAddress:" + sc.getLocalAddress().toString());
+                //清空缓冲区数据
+                writeBuf.clear();
 
                 System.out.println("============客户端读取信息=================");
                 this.seletor.select();
                 Set<SelectionKey> selectionKeys = this.seletor.selectedKeys();
                 Iterator<SelectionKey> keys = selectionKeys.iterator();
-                while (keys.hasNext()){
+                while (keys.hasNext()) {
                     SelectionKey key = keys.next();
                     keys.remove();
-                    if(key.isAcceptable()){
+                    if (key.isAcceptable()) {
                         this.accept(key);
                     }
                     //8 如果为可读状态
-                    if(key.isReadable()){
+                    if (key.isReadable()) {
                         this.read(key);
                     }
                     //9 写数据
-                    if(key.isWritable()){
+                    if (key.isWritable()) {
                         this.write(key); //ssc
                     }
                 }
 
-			} catch (IOException e) {
-				e.printStackTrace();
-			} finally {
-				if(sc != null){
-					try {
-						sc.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		}
-	}
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (sc != null) {
+                    try {
+                        sc.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
         new Thread(new Client(8080)).start();
-	}
+    }
 
 
-    private void write(SelectionKey key){
+    private void write(SelectionKey key) {
         try {
-            SocketChannel sc =  (SocketChannel) key.channel();
+            SocketChannel sc = (SocketChannel) key.channel();
             sc.write(writeBuf);
             writeBuf.clear();
             //写完之后就不需要再将socketChannel注册到selector上
@@ -124,6 +125,7 @@ public class Client implements Runnable{
         }
 
     }
+
     private void read(SelectionKey key) {
         try {
             //1 清空缓冲区旧的数据
@@ -133,7 +135,7 @@ public class Client implements Runnable{
             //3 读取数据
             int count = sc.read(this.readBuf);
             //4 如果没有数据
-            if(count == -1){
+            if (count == -1) {
                 key.channel().close();
                 key.cancel();
                 return;
@@ -154,10 +156,11 @@ public class Client implements Runnable{
         }
 
     }
+
     private void accept(SelectionKey key) {
         try {
             //1 获取服务通道
-            ServerSocketChannel ssc =  (ServerSocketChannel) key.channel();
+            ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
             //2 执行阻塞方法
             SocketChannel sc = ssc.accept();
             //3 设置阻塞模式

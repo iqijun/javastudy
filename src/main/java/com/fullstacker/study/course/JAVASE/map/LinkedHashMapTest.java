@@ -6,9 +6,9 @@ package com.fullstacker.study.course.JAVASE.map;
  * @author xingguishuai
  * @create 2018-08-21-18:14
  **/
-public class LinkedHashMapTest  {
+public class LinkedHashMapTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String tmp = null;
         String str = tmp = "120";
         System.out.println(str);

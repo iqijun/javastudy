@@ -12,7 +12,7 @@ import java.util.concurrent.TimeoutException;
  * @create 2017-04-11-15:25
  **/
 public class ConcurrentFuture {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         new Future<String>() {
             @Override
             public boolean cancel(boolean mayInterruptIfRunning) {

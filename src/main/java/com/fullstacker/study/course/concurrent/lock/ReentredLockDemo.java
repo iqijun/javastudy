@@ -16,41 +16,42 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  */
 public class ReentredLockDemo {
 
-    Lock lock  = new ReentrantLock();
+    Lock lock = new ReentrantLock();
     ReadWriteLock lock1 = new ReentrantReadWriteLock();
-    public static  void main(String[] args){
-       final   ReentredLockDemo reentredLockDemo = new ReentredLockDemo();
+
+    public static void main(String[] args) {
+        final ReentredLockDemo reentredLockDemo = new ReentredLockDemo();
         for (int i = 0; i < 10; i++) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     reentredLockDemo.methodA();
                 }
-            },"Thread_"+i).start();
+            }, "Thread_" + i).start();
         }
     }
 
 
-    public void methodA(){
+    public void methodA() {
         lock.lock();
         try {
-            System.out.println(Thread.currentThread().getName()+"进入mthodA,获得到锁");
+            System.out.println(Thread.currentThread().getName() + "进入mthodA,获得到锁");
             methodB();
-        }catch (Exception e){
+        } catch (Exception e) {
 
-        }finally {
+        } finally {
             lock.unlock();
         }
 
     }
 
-    public  void methodB(){
+    public void methodB() {
         lock.lock();
         try {
-            System.out.println(Thread.currentThread().getName()+"进入mthodB,获得到锁");
-        }catch (Exception e){
+            System.out.println(Thread.currentThread().getName() + "进入mthodB,获得到锁");
+        } catch (Exception e) {
 
-        }finally {
+        } finally {
             lock.unlock();
         }
     }

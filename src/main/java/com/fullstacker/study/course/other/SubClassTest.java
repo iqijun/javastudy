@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class SubClassTest {
 
 
-    public static  void main(String[] args){
+    public static void main(String[] args) {
         Fater fater = new Son();
         fater.print();
         new HashMap<>();
@@ -20,14 +20,14 @@ public class SubClassTest {
 
 }
 
-class  Fater{
-    public void print(){
+class Fater {
+    public void print() {
         System.out.println(1234);
     }
 }
 
-class Son extends  Fater{
-    public void print(){
+class Son extends Fater {
+    public void print() {
         System.out.println(155555);
     }
 }

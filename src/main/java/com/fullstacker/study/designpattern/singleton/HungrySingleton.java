@@ -10,11 +10,11 @@ public class HungrySingleton {
 
     private static HungrySingleton intance = new HungrySingleton();
 
-    private HungrySingleton(){
+    private HungrySingleton() {
 
     }
 
-    public static HungrySingleton getIntance(){
+    public static HungrySingleton getIntance() {
         return intance;
     }
 }

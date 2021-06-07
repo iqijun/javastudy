@@ -10,7 +10,7 @@ public class StringInternTest {
     /****
      * @param args
      */
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         /***
          *
@@ -42,7 +42,7 @@ public class StringInternTest {
          * interned. String literals are defined in section 3.10.5 of the
          * <cite>The Java&trade; Language Specification</cite>.
          *
-         * @return  a string that has the same contents as this string, but is
+         * @return a string that has the same contents as this string, but is
          *          guaranteed to be from a pool of unique strings.
          *
          *
@@ -56,7 +56,6 @@ public class StringInternTest {
          *
          *
          */
-
 
 
         String a = new String("ab");
@@ -77,12 +76,12 @@ public class StringInternTest {
 
 
         String string1 = "abc";
-        String string2 = "a"+"bc";
-        String string3 = "a"+"b"+"c";
-        String string4 = "ab"+"c";
+        String string2 = "a" + "bc";
+        String string3 = "a" + "b" + "c";
+        String string4 = "ab" + "c";
 
-        String  tmp = "ab";
-        String  string5 = tmp+"c";
+        String tmp = "ab";
+        String string5 = tmp + "c";
 
         System.out.println(string1 == string2);//true
         System.out.println(string1 == string3);//true
@@ -97,11 +96,10 @@ public class StringInternTest {
         System.out.println("=======================================");
 
 
-
         StringBuffer sb1 = new StringBuffer();
         sb1.append("计算机").append("软件");
         String str1 = sb1.toString(); //相当于
-        System.out.println("str1:"+(str1.intern() == str1)); // jdk7 true
+        System.out.println("str1:" + (str1.intern() == str1)); // jdk7 true
 
         /****
          *  常量池中为什么会有“java”这个字符串呢？
@@ -116,7 +114,7 @@ public class StringInternTest {
         StringBuffer sb2 = new StringBuffer();
         sb2.append("ja").append("va");
         String str2 = sb2.toString(); //相当于new String("java")
-        System.out.println("str2:"+(str2.intern() == str2)); // jdk7 false
+        System.out.println("str2:" + (str2.intern() == str2)); // jdk7 false
 
         System.out.println("===========================");
 
@@ -124,7 +122,7 @@ public class StringInternTest {
         String abc1 = new String("abc");
         //在创建abc2时只创建了一个堆中的对象，不再创建常量池中的对象
         String abc2 = new String("abc");
-        System.out.println("1233:"+(abc1 == abc2) );
+        System.out.println("1233:" + (abc1 == abc2));
         System.out.println(abc1.intern() == abc1);
         System.out.println(abc1.intern() == abc2);
         System.out.println(abc1.intern() == abc2.intern());

@@ -8,7 +8,7 @@ package com.fullstacker.study.designpattern.strategy;
  */
 public class StrategyDemo {
 
-    public static  void main(String[] args){
+    public static void main(String[] args) {
         PriceStrategy normalStrategy = new PriceStrategy(new NormalCustomer());
         normalStrategy.quotePriceByCustomerType();
 

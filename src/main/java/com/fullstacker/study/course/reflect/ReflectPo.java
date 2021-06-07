@@ -17,7 +17,7 @@ public class ReflectPo {
 
     private List<String> friendsName;
 
-    private Map<String,Object> map;
+    private Map<String, Object> map;
 
     private static String testStatic;
 

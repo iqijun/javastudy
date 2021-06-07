@@ -14,7 +14,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  **/
 public class Serve {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //创建两个线程组，bossGroup负责网络连接，workerGroup负责具体处理
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -22,7 +22,7 @@ public class Serve {
             //服务端辅助类 ，可以用来配置channel
             ServerBootstrap bootstrap = new ServerBootstrap();
             //绑定两个线程组
-            bootstrap.group(bossGroup,workerGroup)
+            bootstrap.group(bossGroup, workerGroup)
                     //设置channel
                     .channel(NioServerSocketChannel.class)
                     //设置handler用于处理消息，

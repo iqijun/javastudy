@@ -23,13 +23,15 @@ public class Client {
     private SocketChannel socketchannel;
     private String hostIp;
     private int port;
+
     /**
      * 构造函数
+     *
      * @param hostIp
      * @param port
      * @throws IOException
      */
-    public Client (String hostIp,int port)throws IOException {
+    public Client(String hostIp, int port) throws IOException {
         this.hostIp = hostIp;
         this.port = port;
         //打开并注册到信道
@@ -39,7 +41,7 @@ public class Client {
 //        initializeServe(8887);
     }
 
-    public void initializeServe(int port)throws IOException{
+    public void initializeServe(int port) throws IOException {
         //1 打开路复用器
         this.selector = Selector.open();
         //2 打开服务器通道
@@ -51,13 +53,15 @@ public class Client {
         ssc.register(this.selector, SelectionKey.OP_ACCEPT);
 
     }
+
     /**
      * 初始化
+     *
      * @throws IOException
      */
-    public void initializeClient()throws IOException{
+    public void initializeClient() throws IOException {
         //打开监听信道并设置为非阻塞模式
-        socketchannel = SocketChannel.open(new InetSocketAddress(hostIp,port));
+        socketchannel = SocketChannel.open(new InetSocketAddress(hostIp, port));
         socketchannel.configureBlocking(false);
         socketchannel.register(selector, SelectionKey.OP_READ);
         //启动读线程
@@ -86,14 +90,15 @@ public class Client {
 //        new Thread(runnable).start();
     }
 
-    public void sendMsg(String message)throws IOException{
+    public void sendMsg(String message) throws IOException {
         ByteBuffer writeBuffer = ByteBuffer.wrap(message.getBytes("UTF-8"));
         socketchannel.write(writeBuffer);
     }
-    public static void main(String[] args)throws IOException{
-        Client client = new Client("127.0.0.1",8888);
+
+    public static void main(String[] args) throws IOException {
+        Client client = new Client("127.0.0.1", 8888);
         Scanner read = new Scanner(System.in);
-        while(true){
+        while (true) {
             System.out.println("本地:");
             String msg = read.next();
             client.sendMsg(msg);

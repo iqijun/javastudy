@@ -10,28 +10,29 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * @author xingguishuai
  * @create 2017-04-13-17:21
  **/
-public abstract class Worker implements  Runnable{
+public abstract class Worker implements Runnable {
     /**
-     *用来获取master中的任务
+     * 用来获取master中的任务
      */
-    private ConcurrentLinkedQueue<Task> tasks ;
+    private ConcurrentLinkedQueue<Task> tasks;
     /**
      * 保存结果
      */
-    private Map<String,Object> resultMap ;
+    private Map<String, Object> resultMap;
+
     @Override
     public void run() {
         //只要存在任务就一直循环取出任务并执行
-        while (true){
+        while (true) {
             //取出一个任务
             Task task = tasks.poll();
             //任务执行完毕
-            if(null == task){
+            if (null == task) {
                 break;
             }
             Object result = handle(task);
             //保存结果
-            resultMap.put(Thread.currentThread().getName()+":"+task.hashCode(),result);
+            resultMap.put(Thread.currentThread().getName() + ":" + task.hashCode(), result);
         }
     }
 

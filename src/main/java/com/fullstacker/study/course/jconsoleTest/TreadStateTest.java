@@ -6,8 +6,9 @@ import java.io.InputStreamReader;
 
 /**
  * 利用jConsole监控线程运行状态
+ * <p>
+ * 示例来自《深入理解java虚拟机》
  *
- *  示例来自《深入理解java虚拟机》
  * @author xingguishuai
  * @create 2018-09-26-17:05
  **/
@@ -32,6 +33,7 @@ public class TreadStateTest {
 
     /**
      * 线程锁等待演示
+     *
      * @param lock
      */
     public static void createLockThread(final Object lock) {
@@ -59,7 +61,6 @@ public class TreadStateTest {
         createLockThread(obj);
 
     }
-
 
 
 }

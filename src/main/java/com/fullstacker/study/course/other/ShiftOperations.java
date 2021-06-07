@@ -8,16 +8,16 @@ package com.fullstacker.study.course.other;
  **/
 public class ShiftOperations {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //右移运算
-        System.out.println(5>>1);
-        System.out.println(5>>2);
-        System.out.println(5>>3);
-        System.out.println(5>>4);
+        System.out.println(5 >> 1);
+        System.out.println(5 >> 2);
+        System.out.println(5 >> 3);
+        System.out.println(5 >> 4);
         //左移运算相当于乘以2^n次方
-        System.out.println(5<<1); //10
-        System.out.println(5<<2); //20
-        System.out.println(5<<3); //40
+        System.out.println(5 << 1); //10
+        System.out.println(5 << 2); //20
+        System.out.println(5 << 3); //40
 
     }
 }

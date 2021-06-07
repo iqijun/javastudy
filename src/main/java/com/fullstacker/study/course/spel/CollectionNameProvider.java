@@ -24,7 +24,7 @@ public class CollectionNameProvider {
         SpelExpressionParser parser = new SpelExpressionParser();
         Expression exp = parser.parseExpression("name");
         String name = (String) exp.getValue(obj);
-        return  "collectTest_";
+        return "collectTest_";
     }
 
     private String doMapper(String type) {

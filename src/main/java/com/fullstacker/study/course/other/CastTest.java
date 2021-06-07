@@ -41,7 +41,6 @@ public class CastTest {
 //        float f5 = (float)d5; //编译错误
 
 
-
         //正确转换方式
         Float f = 1.20390f;
         Double d = Double.valueOf(String.valueOf(f));

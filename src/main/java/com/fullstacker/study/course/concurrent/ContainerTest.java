@@ -17,7 +17,7 @@ import java.util.concurrent.DelayQueue;
  **/
 public class ContainerTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         CopyOnWriteArrayList copyOnWriteArrayList = new CopyOnWriteArrayList();
         copyOnWriteArrayList.add("ad");

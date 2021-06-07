@@ -13,10 +13,10 @@ import java.nio.channels.SocketChannel;
  **/
 public class Handle {
 
-    public  void accept(SelectionKey key) {
+    public void accept(SelectionKey key) {
         try {
             //1 获取服务通道
-            ServerSocketChannel ssc =  (ServerSocketChannel) key.channel();
+            ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
             //2 执行阻塞方法
             SocketChannel sc = ssc.accept();
             //3 设置阻塞模式
@@ -30,12 +30,12 @@ public class Handle {
     }
 
 
-    public void read(SelectionKey key){
+    public void read(SelectionKey key) {
         SocketChannel channel = (SocketChannel) key.channel();
         try {
             ByteBuffer readBuffer = ByteBuffer.allocate(1024);
             int count = channel.read(readBuffer);
-            if(count == -1){
+            if (count == -1) {
                 key.channel().close();
                 key.cancel();
                 return;
@@ -47,15 +47,15 @@ public class Handle {
             //7 接收缓冲区数据
             readBuffer.get(bytes);
             //8 打印结果
-            String body = new String(bytes,"utf-8").trim();
-            System.out.println(channel.getRemoteAddress()+"读取到信息 : " + body);
+            String body = new String(bytes, "utf-8").trim();
+            System.out.println(channel.getRemoteAddress() + "读取到信息 : " + body);
             key.interestOps(SelectionKey.OP_READ | SelectionKey.OP_WRITE);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void write(SelectionKey key,String content){
+    public void write(SelectionKey key, String content) {
 
         try {
             SocketChannel channel = (SocketChannel) key.channel();

@@ -7,8 +7,7 @@ import java.util.concurrent.atomic.AtomicStampedReference;
 public class AtomicRefDemo {
 
 
-
-    public static  void  main(String[] args){
+    public static void main(String[] args) {
 
         AtomicReference atomicReference = new AtomicReference<User>();
         User user1 = new User();
@@ -23,24 +22,27 @@ public class AtomicRefDemo {
         //先设置上值
         atomicReference.set(user1);
 
+        System.out.println("交换前："+ atomicReference.get());
+
         //对比并交换
-        atomicReference.compareAndSet(user1,user2);
+        atomicReference.compareAndSet(user1, user2);
 
 //        查看新值
-        System.out.println(atomicReference.get());
+        System.out.println("交换后："+atomicReference.get());
 
     }
 
 }
 
-class User{
-    private  String name;
+class User {
+    private String name;
 
     private Integer age;
 
-    public User(){}
+    public User() {
+    }
 
-    public  User(String name,Integer age){
+    public User(String name, Integer age) {
         this.name = name;
         this.age = age;
 

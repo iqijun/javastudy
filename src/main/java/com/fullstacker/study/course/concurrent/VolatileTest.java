@@ -14,14 +14,16 @@ public class VolatileTest {
         VolatileTest volatileTest = new VolatileTest();
         volatileTest.test();
     }
+
     /**
-    * <p>功能描述：</p>
-    * @return
-    * @param
-    * @author xingguishuai
-    * @Date 2017-03-16 16:01
-    * @since 1.0
-    */
+     * <p>功能描述：</p>
+     *
+     * @param
+     * @return
+     * @author xingguishuai
+     * @Date 2017-03-16 16:01
+     * @since 1.0
+     */
     public void test() throws InterruptedException {
         Thread t1 = new Thread(new Runnable() {
             @Override
@@ -38,7 +40,7 @@ public class VolatileTest {
             }
         }, "T1");
         t1.start();
-        while (count<1000){
+        while (count < 1000) {
             Thread.sleep(1000);
             System.out.println(Thread.currentThread().getName() + ":" + count);
         }

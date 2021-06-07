@@ -6,5 +6,4 @@ public interface TestCollectionService {
     public TestMongoCollection save(TestMongoCollection po);
 
 
-
 }
