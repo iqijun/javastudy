@@ -63,6 +63,8 @@
 
 4.详细介绍见[博客](http://www.full-stacker.com/archives/256)
 
+5.利用单元素枚举类实现单例
+
 二、Future模式
 
 - [博客](http://www.full-stacker.com/archives/271)
