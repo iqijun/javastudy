@@ -9,7 +9,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("");
-        classPathXmlApplicationContext.getBean("111");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("/spring-config.xml");
+        Object a = classPathXmlApplicationContext.getBean("a");
+        System.out.println(a);
     }
 }
