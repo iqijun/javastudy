@@ -1,5 +1,7 @@
 package com.fullstacker.study.course.concurrent;
 
+import java.util.concurrent.Callable;
+
 /**
  * 多线程
  *
@@ -25,6 +27,7 @@ public class MyThread extends Thread {
         t2.start();
         t3.start();
         t4.start();
+        t1.stop();
 //        try {
 //            String s = testThrowException();
 //        } catch (NullPointerException e) {
@@ -36,4 +39,6 @@ public class MyThread extends Thread {
 //    private static String testThrowException() throws  NullPointerException{
 //        throw  new  NullPointerException("dkkdjk");
 //    }
+
+//   new Thread(new RunThread) ;
 }

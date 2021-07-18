@@ -1,5 +1,8 @@
 package com.fullstacker.study.course.jvm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 这是深入理解java虚拟机中第6章的例子，用于测试class文件结构
  *
@@ -8,12 +11,43 @@ package com.fullstacker.study.course.jvm;
  **/
 public class TestClass {
 
-    private int m;
+    /**
+     * static  final关键字 测试
+     */
+    private static final String  const_value = "constStr";
 
-    public int inc() {
+    private static String static_value = "staticStr";
+
+    private static final TestClass const_obj = new TestClass();
+
+    private int m;
+    /**
+     * 泛型测试
+     */
+    private List<String> listString = new ArrayList<>();
+    /**
+     * 如果是private修饰的方法 javap命令需要添加-p参数才会显示出来
+     * @return
+     */
+    private int inc() {
+        int loadTest4 = 4;
+        int loadTest10 = 10;
+        int loadTest128 = 128;
         return m + 1;
     }
 
+    @Deprecated
+    public void test(){
+
+    }
+    private class testInner{
+
+        private int innerInt = 1;
+
+        private String innerMethod(){
+            return "innerMe";
+        }
+    }
 }
 
 

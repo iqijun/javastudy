@@ -15,7 +15,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 class Executions {
     private String flag = "A";//设置一个flag用来标识应该哪条线程执行
-    private Lock lock = new ReentrantLock();
+    private Lock lock = new ReentrantLock(true);
     private Condition c1 = lock.newCondition();
     private Condition c3 = lock.newCondition();
     private Condition c2 = lock.newCondition();
