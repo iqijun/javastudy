@@ -17,7 +17,7 @@ public class ReflectPo {
 
     private List<String> friendsName;
 
-    private Map<String, Object> map;
+    private Map<String, ReflectPo> map;
 
     private static String testStatic;
 
@@ -45,11 +45,11 @@ public class ReflectPo {
         this.friendsName = friendsName;
     }
 
-    public Map<String, Object> getMap() {
+    public Map<String, ReflectPo> getMap() {
         return map;
     }
 
-    public void setMap(Map<String, Object> map) {
+    public void setMap(Map<String, ReflectPo> map) {
         this.map = map;
     }
 
