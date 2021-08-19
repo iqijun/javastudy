@@ -30,40 +30,78 @@ public class MergeList {
         node2.setNext(node4);
         node4.setNext(node6);
 
-        Node node = mergeList(node1, node2);
+//        Node node = mergeListByIterate(node1, node2);
+        Node node = mergeListByRecursion(node1, node2);
         System.out.println(node);
 
     }
 
+    /**
+     * 通过循环实现
+     * @param n1
+     * @param n2
+     * @return
+     */
+    public static Node mergeListByIterate(Node n1, Node n2) {
 
-    public static Node mergeList(Node n1, Node n2) {
+        if (n1 == null) {
+            return n2;
+        }
+        if (n2 == null) {
+            return n1;
+        }
+        Node sentinel = new Node();
 
-        Node result = new Node();
-
+        Node prehead = sentinel;
         while (true) {
-
-            if (n1 == null && n2 == null) {
-                return null;
-            }
-            if (n1 == null) {
-                return n2;
-            }
-            if (n2 == null) {
-                return n1;
-            }
-            if (n1.getValue() <= n2.getValue()) {
-                result.setNext(n2);
+            if (n1.getValue() > n2.getValue()) {
+                prehead.setNext(n2);
                 n2 = n2.getNext();
             } else {
-                result.setValue(n2.getValue());
-
+                prehead.setNext(n1);
+                n1 = n1.getNext();
             }
-            if (n1.getNext() == null || n2.getNext() == null) {
+            prehead = prehead.getNext();
+            if (n1 == null || n2 == null) {
+                prehead.setNext(n1 == null ? n2: n1);
                 break;
             }
 
         }
-        return result;
+        return sentinel.getNext();
 
     }
+
+    /**
+     * 递归方式实现
+     * @param n1
+     * @param n2
+     * @return
+     */
+    public static Node mergeListByRecursion(Node n1, Node n2){
+        if (n1 == null) {
+            return n2;
+        }
+        if (n2 == null) {
+            return n1;
+        }
+        Node sentinel = new Node();
+
+        Node prehead = sentinel;
+
+        if(n1.getValue() > n2.getValue()){
+            prehead.setNext(n2);
+            n2 = n2.getNext();
+
+        }else{
+            prehead.setNext(n1);
+            n1 = n1.getNext();
+        }
+        prehead = prehead.getNext();
+        Node node = mergeListByRecursion(n1, n2);
+        prehead.setNext(node);
+
+        return  sentinel.getNext();
+    }
+
 }
