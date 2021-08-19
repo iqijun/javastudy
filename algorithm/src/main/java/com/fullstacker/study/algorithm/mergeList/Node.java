@@ -1,4 +1,4 @@
-package com.fullstacker.study.course.algorithm.mergeList;
+package com.fullstacker.study.algorithm.mergeList;
 
 /**
  * @program: course

@@ -1,6 +1,5 @@
-package com.fullstacker.study.course.algorithm;
+package com.fullstacker.study.algorithm;
 
-import com.fullstacker.study.designpattern.future.Main;
 import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import org.springframework.util.CollectionUtils;

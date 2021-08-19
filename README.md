@@ -34,7 +34,7 @@
         在编译期间就会执行if判断去除掉不能到达的条件分支 ，因此编译后这个条件分支会消失
         
 六、常见算法实现    
-    1. 快速排序  [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/algorithm/QuickSort.java)
+    1. 快速排序  [参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/com.fullstacker.study.algorithm/QuickSort.java)
     
 七、多线程相关
 1. CountDownLatch使用示例[参考代码](https://github.com/iqijun/javastudy/tree/master/src/main/java/com/fullstacker/study/course/concurrent/CountDownLatchTest.java)

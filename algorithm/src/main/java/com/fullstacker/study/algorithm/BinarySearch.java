@@ -1,4 +1,4 @@
-package com.fullstacker.study.course.algorithm;
+package com.fullstacker.study.algorithm;
 
 /**
  * @program: course

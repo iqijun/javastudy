@@ -6,6 +6,7 @@
 
     <groupId>com.fullstacker.study</groupId>
     <artifactId>course</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -19,6 +20,11 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>redis</module>
+        <module>provider</module>
+        <module>com.fullstacker.study.algorithm</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
