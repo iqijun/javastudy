@@ -4,7 +4,7 @@ package com.fullstacker.study;
 import java.util.ArrayList;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-31-18:17
  **/
 public class test {
@@ -13,7 +13,7 @@ public class test {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-03-31 18:21
      * @since 1.0
      */

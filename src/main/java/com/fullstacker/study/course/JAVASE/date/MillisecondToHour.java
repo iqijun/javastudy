@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * 毫秒转成时分秒格式
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2018-09-21-15:20
  **/
 public class MillisecondToHour {

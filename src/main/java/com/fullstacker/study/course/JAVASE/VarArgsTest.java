@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @program: course
  * @description: 变长参数测试
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-05-30 14:56
  */
 public class VarArgsTest {

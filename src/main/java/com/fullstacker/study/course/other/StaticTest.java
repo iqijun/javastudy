@@ -3,7 +3,7 @@ package com.fullstacker.study.course.other;
 /**
  * @program: course
  * @description: 测试类的初始化顺序
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-03-19 10:01
  * <p>
  * <p>

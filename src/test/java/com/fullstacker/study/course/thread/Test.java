@@ -1,7 +1,7 @@
 package com.fullstacker.study.course.thread;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-15-9:48
  **/
 public class Test {

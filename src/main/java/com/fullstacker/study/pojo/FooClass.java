@@ -5,7 +5,7 @@ import jdk.nashorn.internal.objects.annotations.Getter;
 /**
  * @program: course
  * @description: 普通实体类
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-04-05 16:15
  */
 public class FooClass implements Cloneable{

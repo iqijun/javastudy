@@ -3,7 +3,7 @@ package com.fullstacker.study.course.JAVASE.math;
 import java.math.BigDecimal;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2018-09-11-13:27
  **/
 public class BigDecimalTest {

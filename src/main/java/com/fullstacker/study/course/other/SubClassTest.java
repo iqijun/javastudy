@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  * @program: course
  * @description:
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-06-05 12:38
  */
 public class SubClassTest {

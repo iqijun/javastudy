@@ -5,7 +5,7 @@ import sun.misc.Launcher;
 /**
  * @program: course
  * @description:
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-07-14 16:59
  */
 public class ClassLoaderParentTest {

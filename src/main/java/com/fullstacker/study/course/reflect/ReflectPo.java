@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 反射示例实体类
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-11-08-16:14
  **/
 public class ReflectPo {

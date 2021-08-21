@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * worker类
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-04-13-17:21
  **/
 public abstract class Worker implements Runnable {

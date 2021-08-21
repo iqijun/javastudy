@@ -3,7 +3,7 @@ package com.fullstacker.study.course.jvm;
 /**
  * <p>功能描述：类初始化测试</p>
  *
- * @author: xingguishuai
+ * @author: xgs
  * @Date: 2018/10/19 14:36
  * @since 1.0
  */

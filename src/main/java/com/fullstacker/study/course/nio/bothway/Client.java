@@ -15,7 +15,7 @@ import java.util.Scanner;
 /**
  * 客户端
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-05-24-10:21
  **/
 public class Client {

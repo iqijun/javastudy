@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2017-07-27-17:55
  **/
 public class CalendarUtil {

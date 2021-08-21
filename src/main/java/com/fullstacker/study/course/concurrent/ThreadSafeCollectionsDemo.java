@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
  * CopyOnWriteArrayList
  * CopyOnWriteArraySet
  * ConcurrentHashMap
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-05-25 16:32
  */
 public class ThreadSafeCollectionsDemo {

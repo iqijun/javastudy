@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 /**
  * @program: course
  * @description: SemaphoreTest  信号量，  使用场景，如10辆车去抢3个停车位，车辆驶出停车位后通知其他车辆进入停车位
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-05-02 15:45
  */
 public class SemaphoreTest {

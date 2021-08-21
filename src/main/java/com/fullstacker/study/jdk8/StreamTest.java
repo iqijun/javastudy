@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 /**
  * @description:
- * @author: xingguishuai
+ * @author: xgs
  * @time: 2020/5/12 23:40
  */
 public class StreamTest {

@@ -3,7 +3,7 @@ package com.fullstacker.study.course.concurrent;
 /**
  * 多线程访问同一个类的多个对象相同一个方法
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-02-28-11:01
  **/
 public class MutiThread {

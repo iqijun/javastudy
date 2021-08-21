@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 /**
  * 反射示例
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-11-08-16:13
  **/
 public class ReflectDemo {

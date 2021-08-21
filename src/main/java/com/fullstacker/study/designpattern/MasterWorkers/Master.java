@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * master类
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-04-13-17:21
  **/
 public class Master {
@@ -30,7 +30,7 @@ public class Master {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-04-13 17:50
      * @since 1.0
      */
@@ -48,7 +48,7 @@ public class Master {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-04-13 18:02
      * @since 1.0
      */
@@ -61,7 +61,7 @@ public class Master {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-04-13 18:01
      * @since 1.0
      */
@@ -76,7 +76,7 @@ public class Master {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-04-13 18:06
      * @since 1.0
      */
@@ -95,7 +95,7 @@ public class Master {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-04-13 18:26
      * @since 1.0
      */

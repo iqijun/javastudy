@@ -3,7 +3,7 @@ package com.fullstacker.study.algorithm;
 /**
  * @program: course
  * @description: 冒泡排序
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-10-24 15:36
  */
 public class BubbleSort {

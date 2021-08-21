@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * @program: biz-es
  * @description:
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-02-28 17:19
  */
 @Document(collection = "#{@collectionNameProvider.getCollectionName(#root)}")

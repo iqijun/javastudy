@@ -3,7 +3,7 @@ package com.fullstacker.study.designpattern.singleton;
 /**
  * @program: course
  * @description: 升级版的饿汉模式
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-01-19 23:48
  */
 public class HungrySingletonV2 {

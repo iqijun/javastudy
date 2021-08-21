@@ -18,7 +18,7 @@ public enum EnumSingleton {
     /**
      * <p>功能描述：这是这个枚举类的构造方法，它天然是私有的外部不能访问</p>
      *
-     * @author: xingguishuai
+     * @author: xgs
      * @Date: 2019-08-31 15:55
      * @ return
      * @since 1.0

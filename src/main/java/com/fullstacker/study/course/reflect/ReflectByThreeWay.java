@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * @program: course
  * @description: 反射的三种方式
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-05-30 22:11
  */
 public class ReflectByThreeWay {

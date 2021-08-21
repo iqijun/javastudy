@@ -3,7 +3,7 @@ package com.fullstacker.study.algorithm.mergeList;
 /**
  * @program: course
  * @description: 链表节点
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-06-30 18:13
  */
 public class Node {

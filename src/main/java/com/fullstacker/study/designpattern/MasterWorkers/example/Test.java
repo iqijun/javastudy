@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * 测试master worker模式
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-04-13-18:39
  **/
 public class Test {

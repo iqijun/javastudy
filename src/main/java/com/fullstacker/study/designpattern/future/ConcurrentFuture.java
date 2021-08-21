@@ -8,7 +8,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * jdk concurrent包中Future类使用示例
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-04-11-15:25
  **/
 public class ConcurrentFuture {

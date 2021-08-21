@@ -3,7 +3,7 @@ package com.fullstacker.study.course.reflect;
 /**
  * @program: course
  * @description: 通过反射创建Long对象
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-04-01 15:59
  */
 public class RelfelctLong {

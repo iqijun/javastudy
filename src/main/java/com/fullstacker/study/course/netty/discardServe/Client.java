@@ -9,7 +9,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2017-06-09-18:12
  **/
 public class Client {

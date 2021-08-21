@@ -3,7 +3,7 @@ package com.fullstacker.study.course.concurrent;
 /**
  * 锁对象的改变问题
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-06-18:31
  **/
 public class ChangeLock {

@@ -6,7 +6,7 @@ package com.fullstacker.study.designpattern.strategy;
  * 就可以在这个中定义一个报价方法，然后让不同的用户去实现这个方法;
  * <p>
  * 策略模式仅仅对各种策略进行封装，但至于要使用哪一个策略要客户端自己决定
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-07-27 21:32
  */
 public interface Strategy {

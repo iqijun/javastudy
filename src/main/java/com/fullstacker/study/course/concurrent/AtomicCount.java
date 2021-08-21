@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Atomic类示例，多线程间保持原子性
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-14-10:33
  **/
 public class AtomicCount {
@@ -22,7 +22,7 @@ public class AtomicCount {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-03-16 15:43
      * @since 1.0
      */

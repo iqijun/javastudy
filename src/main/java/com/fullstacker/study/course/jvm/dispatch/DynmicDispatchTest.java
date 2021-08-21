@@ -3,7 +3,7 @@ package com.fullstacker.study.course.jvm.dispatch;
 /**
  * @program: course
  * @description: 动态分派测试
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-07-15 09:49
  */
 public class DynmicDispatchTest {

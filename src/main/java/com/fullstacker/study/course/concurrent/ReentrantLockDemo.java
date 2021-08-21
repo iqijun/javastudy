@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @description: lock使用示例，绑定多条件，顺序唤醒线程
  * <p>
  * 线程A执行方法A，执行完成后唤醒线程B执行方法B，然后唤醒线程C执行方法C
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-05-12 15:33
  */
 

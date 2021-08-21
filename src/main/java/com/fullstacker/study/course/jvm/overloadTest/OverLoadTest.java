@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @program: course
  * @description: 加入泛型的方法重载
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2018-10-29 13:51
  */
 public class OverLoadTest {

@@ -3,7 +3,7 @@ package com.fullstacker.study.course.JAVASE.map;
 /**
  * LinkedHashMap测试类
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2018-08-21-18:14
  **/
 public class LinkedHashMapTest {

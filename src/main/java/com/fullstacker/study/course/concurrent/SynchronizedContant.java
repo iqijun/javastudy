@@ -3,7 +3,7 @@ package com.fullstacker.study.course.concurrent;
 /**
  * 常量做为synchronized的对象
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-01-13:59
  **/
 public class SynchronizedContant {

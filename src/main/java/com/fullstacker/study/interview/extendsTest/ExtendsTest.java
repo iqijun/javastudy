@@ -3,7 +3,7 @@ package com.fullstacker.study.interview.extendsTest;
 /**
  * @program: course
  * @description: java继承测试类
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-04-04 16:55
  */
 public class ExtendsTest {

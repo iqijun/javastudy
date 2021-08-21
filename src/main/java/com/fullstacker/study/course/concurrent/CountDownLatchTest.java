@@ -5,7 +5,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * @program: course
  * @description: CountDownLatch测试   从指定的大小减到0后才执行下面的逻辑
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-05-02 15:13
  */
 public class CountDownLatchTest {

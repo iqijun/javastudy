@@ -12,7 +12,7 @@ import java.util.concurrent.DelayQueue;
 /**
  * 容器类使用
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-22-11:04
  **/
 public class ContainerTest {

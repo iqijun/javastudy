@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2018-08-14-18:37
  **/
 public class SortUtils {
@@ -26,7 +26,7 @@ public class SortUtils {
      * </p>
      *
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2018-08-15 14:22
      * @since 1.0
      */

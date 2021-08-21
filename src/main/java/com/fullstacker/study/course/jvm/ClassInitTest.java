@@ -3,7 +3,7 @@ package com.fullstacker.study.course.jvm;
 /**
  * @program: course
  * @description: 类初始化测试
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-07-14 16:30
  */
 public class ClassInitTest {

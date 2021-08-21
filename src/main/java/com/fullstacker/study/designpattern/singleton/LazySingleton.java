@@ -3,7 +3,7 @@ package com.fullstacker.study.designpattern.singleton;
 /**
  * 懒汉模式
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-27-15:58
  **/
 public class LazySingleton {
@@ -19,7 +19,7 @@ public class LazySingleton {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-03-27 15:59
      * @since 1.0
      */
@@ -36,7 +36,7 @@ public class LazySingleton {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-03-27 15:59
      * @since 1.0
      */

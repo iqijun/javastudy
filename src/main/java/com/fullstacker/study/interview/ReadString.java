@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 国美面试题，三个线程依次读取字符串中的n个字符，并输出
  * 同PrintThreadTest.java
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-07-10:03
  **/
 public class ReadString {
@@ -35,7 +35,7 @@ public class ReadString {
      * @param string  需要被读取的字符串
      * @param readNum 每次读取的个数
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-03-07 10:17
      * @since 1.0
      */

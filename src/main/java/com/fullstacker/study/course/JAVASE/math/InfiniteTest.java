@@ -3,7 +3,7 @@ package com.fullstacker.study.course.JAVASE.math;
 /**
  * @program: course
  * @description: 无穷大
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-07-13 15:53
  */
 public class InfiniteTest {

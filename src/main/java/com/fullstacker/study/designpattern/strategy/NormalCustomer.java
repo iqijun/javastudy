@@ -3,7 +3,7 @@ package com.fullstacker.study.designpattern.strategy;
 /**
  * @program: course
  * @description: 针对普通用户的报价
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-07-28 22:26
  */
 public class NormalCustomer implements Strategy {

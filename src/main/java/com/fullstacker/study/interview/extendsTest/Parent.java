@@ -3,7 +3,7 @@ package com.fullstacker.study.interview.extendsTest;
 /**
  * @program: course
  * @description:
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-04-04 16:51
  */
 public class Parent {

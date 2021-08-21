@@ -3,7 +3,7 @@ package com.fullstacker.study.course.concurrent;
 /**
  * valitile关键字
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-13-16:01
  **/
 public class VolatileVariable extends Thread {

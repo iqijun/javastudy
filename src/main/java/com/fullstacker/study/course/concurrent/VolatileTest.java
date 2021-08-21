@@ -3,7 +3,7 @@ package com.fullstacker.study.course.concurrent;
 /**
  * volatile 用例
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-16-15:56
  **/
 public class VolatileTest {
@@ -20,7 +20,7 @@ public class VolatileTest {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-03-16 16:01
      * @since 1.0
      */

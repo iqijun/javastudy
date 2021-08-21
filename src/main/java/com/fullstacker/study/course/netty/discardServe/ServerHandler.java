@@ -7,7 +7,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2017-06-09-18:13
  **/
 public class ServerHandler extends ChannelInboundHandlerAdapter {

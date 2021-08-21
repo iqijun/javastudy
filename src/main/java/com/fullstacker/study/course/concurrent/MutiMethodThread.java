@@ -6,7 +6,7 @@ package com.fullstacker.study.course.concurrent;
  * 如该代码示例：如果两个方法都加锁，则tread2会“等待”thread1 执行完释放锁后再执行print2方法
  * 如果一个方法有锁，一个方法没锁，则thread2可以异步的调用print2方法
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-02-28-11:18
  **/
 public class MutiMethodThread {

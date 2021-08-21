@@ -3,7 +3,7 @@ package com.fullstacker.study.course.concurrent;
 /**
  * join方法使用示例
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-24-14:22
  **/
 public class ThreadJoin {
@@ -13,7 +13,7 @@ public class ThreadJoin {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-03-24 14:27
      * @since 1.0
      */

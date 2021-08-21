@@ -3,7 +3,7 @@ package com.fullstacker.study.course.other;
 /**
  * 位移运算
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-12-14-17:21
  **/
 public class ShiftOperations {

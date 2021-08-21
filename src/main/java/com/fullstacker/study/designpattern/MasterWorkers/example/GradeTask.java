@@ -5,7 +5,7 @@ import com.fullstacker.study.designpattern.MasterWorkers.Task;
 /**
  * 计算学生成绩任务
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-04-13-18:30
  **/
 public class GradeTask implements Task {

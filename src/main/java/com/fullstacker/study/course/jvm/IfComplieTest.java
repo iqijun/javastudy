@@ -3,7 +3,7 @@ package com.fullstacker.study.course.jvm;
 /**
  * @program: course
  * @description: if条件编译
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2018-10-29 15:19
  */
 public class IfComplieTest {

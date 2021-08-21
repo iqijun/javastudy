@@ -3,7 +3,7 @@ package com.fullstacker.study.course.other;
 import java.text.DecimalFormat;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2017-07-25-16:57
  **/
 public class ListComparator {

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @program: biz-es
  * @description:
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-02-28 17:18
  */
 @Component("collectionNameProvider")

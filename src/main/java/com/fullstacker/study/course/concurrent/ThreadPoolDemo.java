@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 /**
  * @program: course
  * @description: 线程池使用示例
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-05-18 16:10
  */
 public class ThreadPoolDemo {

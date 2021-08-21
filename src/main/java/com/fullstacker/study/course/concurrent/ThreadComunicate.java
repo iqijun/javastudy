@@ -3,7 +3,7 @@ package com.fullstacker.study.course.concurrent;
 /**
  * 线程间通讯
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-17-13:25
  **/
 public class ThreadComunicate {

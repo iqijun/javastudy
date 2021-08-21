@@ -4,7 +4,7 @@ package com.fullstacker.study.algorithm.mergeList;
  * @program: course
  * @description: 合并链表
  * 两个有序链表 n1, n2,将两个链表合并，并返回合并后的链表
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-06-30 18:23
  */
 public class MergeList {

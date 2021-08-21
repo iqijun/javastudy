@@ -8,7 +8,7 @@ import java.util.List;
  * <p>
  * 示例来自《深入理解java虚拟机》
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2018-09-26-16:07
  **/
 public class JConsoleUseTest {

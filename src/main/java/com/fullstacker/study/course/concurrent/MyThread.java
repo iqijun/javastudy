@@ -5,7 +5,7 @@ import java.util.concurrent.Callable;
 /**
  * 多线程
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-02-27-10:04
  **/
 public class MyThread extends Thread {

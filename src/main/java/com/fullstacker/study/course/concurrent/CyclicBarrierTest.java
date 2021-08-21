@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @program: course
  * @description: cyclicBarrier    从0累加到某个数值后才能继续执行下面的逻辑  比如要凑齐n个人开会，一定要等到所有的人到齐后才能开始会议
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-05-02 15:32
  */
 public class CyclicBarrierTest {

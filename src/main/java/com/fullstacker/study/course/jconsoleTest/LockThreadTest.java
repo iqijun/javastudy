@@ -4,7 +4,7 @@ package com.fullstacker.study.course.jconsoleTest;
  * 线程死锁测试
  * 示例来自《深入理解java虚拟机》
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2018-09-26-17:32
  **/
 public class LockThreadTest {

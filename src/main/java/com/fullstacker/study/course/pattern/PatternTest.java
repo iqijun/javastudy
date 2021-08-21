@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * @program: course
  * @description: 正则表达式测试
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-10-12 13:28
  */
 public class PatternTest {

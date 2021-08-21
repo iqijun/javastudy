@@ -3,7 +3,7 @@ package com.fullstacker.study.course.other;
 /**
  * 强制类型转换测试
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-12-19-17:53
  **/
 public class CastTest {

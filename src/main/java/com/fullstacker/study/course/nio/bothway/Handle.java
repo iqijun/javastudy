@@ -8,7 +8,7 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2017-05-24-10:20
  **/
 public class Handle {

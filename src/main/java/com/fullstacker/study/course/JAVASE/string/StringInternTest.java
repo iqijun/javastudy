@@ -1,7 +1,7 @@
 package com.fullstacker.study.course.JAVASE.string;
 
 /**
- * @author xingguishuai
+ * @author xgs
  * @create 2018-09-15-11:35
  **/
 public class StringInternTest {

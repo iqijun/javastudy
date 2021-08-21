@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 这是深入理解java虚拟机中第6章的例子，用于测试class文件结构
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2018-10-09-16:48
  **/
 public class TestClass {
@@ -53,8 +53,8 @@ public class TestClass {
 
 /**
  * javap命令查看字节码指令
- * C:\Users\xingguishuai\Desktop>javap -v TestClass.class
- * Classfile /C:/Users/xingguishuai/Desktop/TestClass.class
+ * C:\Users\xgs\Desktop>javap -v TestClass.class
+ * Classfile /C:/Users/xgs/Desktop/TestClass.class
  * Last modified 2018-10-9; size 419 bytes
  * MD5 checksum c6020a839b8c79ad1302ed73f260b32b
  * Compiled from "TestClass.java"

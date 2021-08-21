@@ -3,7 +3,7 @@ package com.fullstacker.study.designpattern.singleton;
 /**
  * 双重判断法
  *
- * @author xingguishuai
+ * @author xgs
  * @create 2017-03-27-16:06
  **/
 public class DubbleSingleton {
@@ -19,7 +19,7 @@ public class DubbleSingleton {
      *
      * @param
      * @return
-     * @author xingguishuai
+     * @author xgs
      * @Date 2017-03-27 15:59
      * @since 1.0
      */

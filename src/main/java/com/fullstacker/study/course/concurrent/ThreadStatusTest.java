@@ -6,7 +6,7 @@ package com.fullstacker.study.course.concurrent;
  *
  * 有一个4*50的二维数组，用4个线程去分5个阶段去填满它，也就说，第一阶段大家一起填0-9，当大家都填满了0-9，再一起去填10-19，
  * 以此类推，先填满的线程要等着其他线程都填好了，再继续。
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2021-06-25 11:15
  */
 

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * @program: course
  * @description: 快速排序
- * @author: xingguishuai
+ * @author: xgs
  * @create: 2019-03-31 20:43
  */
 public class QuickSort {
