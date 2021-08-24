@@ -44,7 +44,7 @@ class Executions {
         lock.lock();
         try {
             while (!"B".equalsIgnoreCase(flag)) {
-                c1.wait();
+                c2.wait();
             }
             for (int i = 0; i < 3; i++) {
                 System.out.println(Thread.currentThread().getName() + ",echo B");
