@@ -5,6 +5,27 @@ import java.util.TreeMap;
 /**
  * @program: bianlifeng
  * @description:
+ *
+ * Range 为一个区间, 如 [1,5), [2,100000]
+ * Value 为一个数组, 如 [1,2,3]
+ * 实现一个数据结构, 提供如下功能
+ * put (Range, Value)
+ * get (index )
+ *
+ * 例子:
+ * put ([1,3), [2,3,4]])
+ * get (1) = [2,3,4]
+ * get(0) = []
+ * get(3) = []
+ *
+ * put ([2,1000000), [4,5,6])
+ * get(1) = [2,3,4]
+ * get(2) = [2,3,4,5,6]
+ * get(999999) = [4,5,6]
+ * get (1000000)=[]
+ *
+ *
+ * ps  此代码实现是在区间不重叠的情况下实现的
  * @author: xgs
  * @create: 2021-08-23 11:41
  */
