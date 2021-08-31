@@ -1,4 +1,4 @@
-package com.fullstacker.study.algorithm;
+package com.fullstacker.study.algorithm.sort;
 
 import com.google.common.collect.Lists;
 import com.google.gson.Gson;

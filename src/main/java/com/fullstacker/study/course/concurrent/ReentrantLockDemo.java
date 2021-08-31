@@ -90,7 +90,7 @@ public class ReentrantLockDemo {
             public void run() {
                 executions.aMethod();
             }
-        }, "Thead_A").start();
+        }, "Thead_A" ).start();
         new Thread(new Runnable() {
             @Override
             public void run() {
