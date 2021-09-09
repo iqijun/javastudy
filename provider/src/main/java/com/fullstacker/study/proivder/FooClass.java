@@ -1,4 +1,4 @@
-package com.fullstacker.study.pojo;
+package com.fullstacker.study.proivder;
 
 import jdk.nashorn.internal.objects.annotations.Getter;
 

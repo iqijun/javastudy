@@ -1,6 +1,9 @@
 package com.fullstacker.study.course.JAVASE.cloneTest;
 
-import com.fullstacker.study.pojo.FooClass;
+
+import com.fullstacker.study.proivder.FooClass;
+
+import java.util.HashSet;
 
 /**
  * @program: course
