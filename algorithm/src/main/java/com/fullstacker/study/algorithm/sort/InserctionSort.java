@@ -3,6 +3,8 @@ package com.fullstacker.study.algorithm.sort;
 /**
  * @program: course
  * @description: 插入排序
+ * 插入排序整体思路： 将数组前半部分假设为有序集，然后将数组后面部分的数据不断和前半部分的数据对比，如果后边的数小，就将前半部分的数依次后移。
+ * 对比时，从有序部分的尾部开始，逐渐向头部移动，这样相对于从头部——>尾部的顺序，数据移动次数更少
  * @author: xgs
  * @create: 2021-09-09 22:49
  */
