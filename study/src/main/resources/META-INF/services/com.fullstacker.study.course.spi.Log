@@ -1,0 +1,2 @@
+com.fullstacker.study.course.spi.LogbackLog
+com.fullstacker.study.course.spi.Log4jLog
