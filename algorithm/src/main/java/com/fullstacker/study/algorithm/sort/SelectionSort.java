@@ -2,8 +2,8 @@ package com.fullstacker.study.algorithm.sort;
 
 /**
  * @program: course
- * @description: Ñ¡ÔñÅÅĞò
- * Ñ¡ÔñÅÅĞò£ºÔÚÊı×éÖĞÕÒ³ö×îĞ¡µÄÊı£¬²åÈëµ½Êı×éµÚÒ»¸öÎ»ÖÃ£¬È»ºóÑ°ÕÒµÚ¶şĞ¡µÄÊı²åÈëµ½µÚ¶ş¸öÎ»ÖÃ£¬ÒÔ´ËÀàÍÆ
+ * @description: é€‰æ‹©æ’åº
+ * é€‰æ‹©æ’åºï¼šåœ¨æ•°ç»„ä¸­æ‰¾å‡ºæœ€å°çš„æ•°ï¼Œæ’å…¥åˆ°æ•°ç»„ç¬¬ä¸€ä¸ªä½ç½®ï¼Œç„¶åå¯»æ‰¾ç¬¬äºŒå°çš„æ•°æ’å…¥åˆ°ç¬¬äºŒä¸ªä½ç½®ï¼Œä»¥æ­¤ç±»æ¨
  * @author: xgs
  * @create: 2021-09-09 23:15
  */
@@ -17,7 +17,7 @@ public class SelectionSort {
 
     private static void sort(int[] array){
 
-        int min,minIndex; // ¼ÇÂ¼×îĞ¡µÄÊı£¬ºÍÕâ¸öÊıËùÔÚµÄÏÂ±ê
+        int min,minIndex; // è®°å½•æœ€å°çš„æ•°ï¼Œå’Œè¿™ä¸ªæ•°æ‰€åœ¨çš„ä¸‹æ ‡
         for (int i = 0; i < array.length; i++) {
             min = array[i];
             minIndex = i;
@@ -27,7 +27,7 @@ public class SelectionSort {
                     minIndex = j;
                 }
             }
-            // array[i] Óë×îĞ¡µÄÊı½»»»Î»ÖÃ
+            // array[i] ä¸æœ€å°çš„æ•°äº¤æ¢ä½ç½®
             array[minIndex] = array[i];
             array[i] = min;
 

@@ -6,13 +6,13 @@ import java.util.TreeMap;
  * @program: bianlifeng
  * @description:
  *
- * Range ÎªÒ»¸öÇø¼ä, Èç [1,5), [2,100000]
- * Value ÎªÒ»¸öÊı×é, Èç [1,2,3]
- * ÊµÏÖÒ»¸öÊı¾İ½á¹¹, Ìá¹©ÈçÏÂ¹¦ÄÜ
+ * Range ä¸ºä¸€ä¸ªåŒºé—´, å¦‚ [1,5), [2,100000]
+ * Value ä¸ºä¸€ä¸ªæ•°ç»„, å¦‚ [1,2,3]
+ * å®ç°ä¸€ä¸ªæ•°æ®ç»“æ„, æä¾›å¦‚ä¸‹åŠŸèƒ½
  * put (Range, Value)
  * get (index )
  *
- * Àı×Ó:
+ * ä¾‹å­:
  * put ([1,3), [2,3,4]])
  * get (1) = [2,3,4]
  * get(0) = []
@@ -25,7 +25,7 @@ import java.util.TreeMap;
  * get (1000000)=[]
  *
  *
- * ps  ´Ë´úÂëÊµÏÖÊÇÔÚÇø¼ä²»ÖØµşµÄÇé¿öÏÂÊµÏÖµÄ
+ * ps  æ­¤ä»£ç å®ç°æ˜¯åœ¨åŒºé—´ä¸é‡å çš„æƒ…å†µä¸‹å®ç°çš„
  * @author: xgs
  * @create: 2021-08-23 11:41
  */
@@ -104,11 +104,11 @@ public class RangMap {
         @Override
         public Object put(Object key, Object value) {
             if(null == key ){
-                throw new RuntimeException("key ²»ÄÜÎªnull");
+                throw new RuntimeException("key ä¸èƒ½ä¸ºnull");
             }
             Node nodeKey = (Node) key;
             if(nodeKey.getMax() == null || nodeKey.getMin() == null){
-                throw new RuntimeException("maxºÍmin²»ÄÜÎªnull");
+                throw new RuntimeException("maxå’Œminä¸èƒ½ä¸ºnull");
             }
             return super.put(key, value);
         }

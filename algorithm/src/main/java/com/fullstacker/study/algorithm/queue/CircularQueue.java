@@ -2,40 +2,40 @@ package com.fullstacker.study.algorithm.queue;
 
 /**
  * @program: course
- * @description: Ñ­»·¶ÓÁÐ
+ * @description: å¾ªçŽ¯é˜Ÿåˆ—
  * @author: xgs
  * @create: 2021-08-31 20:23
  */
 
 public class CircularQueue {
-    // Êý×é£ºitems£¬Êý×é´óÐ¡£ºn
+    // æ•°ç»„ï¼šitemsï¼Œæ•°ç»„å¤§å°ï¼šn
     private String[] items;
     private int n = 0;
-    // head±íÊ¾¶ÓÍ·ÏÂ±ê£¬tail±íÊ¾¶ÓÎ²ÏÂ±ê
+    // headè¡¨ç¤ºé˜Ÿå¤´ä¸‹æ ‡ï¼Œtailè¡¨ç¤ºé˜Ÿå°¾ä¸‹æ ‡
     private int head = 0;
     private int tail = 0;
 
-    // ÉêÇëÒ»¸ö´óÐ¡ÎªcapacityµÄÊý×é
+    // ç”³è¯·ä¸€ä¸ªå¤§å°ä¸ºcapacityçš„æ•°ç»„
     public CircularQueue(int capacity) {
         items = new String[capacity];
         n = capacity;
     }
 
-    // Èë¶Ó
+    // å…¥é˜Ÿ
     public boolean enqueue(String item) {
-        // ¶ÓÁÐÂúÁË
+        // é˜Ÿåˆ—æ»¡äº†
         if ((tail + 1) % n == head) return false;
         items[tail] = item;
         tail++;
-       if(tail >= n){
-           tail = 0;
-       }
+        if(tail >= n){
+            tail = 0;
+        }
         return true;
     }
 
-    // ³ö¶Ó
+    // å‡ºé˜Ÿ
     public String dequeue() {
-        // Èç¹ûhead == tail ±íÊ¾¶ÓÁÐÎª¿Õ
+        // å¦‚æžœhead == tail è¡¨ç¤ºé˜Ÿåˆ—ä¸ºç©º
         if (head == tail) return null;
         String ret = items[head];
         head++;
