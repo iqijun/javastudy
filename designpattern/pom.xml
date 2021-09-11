@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>algorithm</artifactId>
-    <description>常见算法</description>
+    <artifactId>designpattern</artifactId>
+    <description>常见设计模式</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

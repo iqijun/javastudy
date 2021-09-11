@@ -24,6 +24,7 @@
         <module>redis</module>
         <module>provider</module>
         <module>com.fullstacker.study.algorithm</module>
+        <module>designpattern</module>
     </modules>
     <dependencies>
         <dependency>

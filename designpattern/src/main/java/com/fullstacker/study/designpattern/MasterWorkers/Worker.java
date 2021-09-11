@@ -1,7 +1,6 @@
 package com.fullstacker.study.designpattern.MasterWorkers;
 
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
