@@ -1,6 +1,5 @@
 package com.fullstacker.study.jdk8;
 
-import com.google.gson.Gson;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,8 +23,8 @@ public class StreamTest {
 
         List<Byte> collect = numbers.stream().map(Integer::byteValue).collect(Collectors.toList());
 
-        Gson gson = new Gson();
-        String s = gson.toJson(squaresList);
-        System.out.println(s);
+//        Gson gson = new Gson();
+//        String s = gson.toJson(squaresList);
+        System.out.println();
     }
 }

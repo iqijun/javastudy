@@ -1,3 +1,4 @@
+/*
 package com.fullstacker.study.course.xml.xstream;
 
 import com.fullstacker.study.course.JAVASE.date.DateUtil;
@@ -9,10 +10,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
+*/
 /**
  * @description:
  * @time: 2020/10/22 17:12
- */
+ *//*
+
 public class XStreamTest {
 
     public static void main(String[] args) {
@@ -44,3 +47,4 @@ public class XStreamTest {
         System.out.println(message);
     }
 }
+*/

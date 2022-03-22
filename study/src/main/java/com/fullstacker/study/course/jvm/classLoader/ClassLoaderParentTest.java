@@ -1,6 +1,6 @@
 package com.fullstacker.study.course.jvm.classLoader;
 
-import sun.misc.Launcher;
+//import sun.misc.Launcher;
 
 /**
  * @program: course
@@ -17,7 +17,7 @@ public class ClassLoaderParentTest {
     public static void main(String[] args) {
 
 //        ClassLoader classLoader = new ClassLoader();
-        Launcher.getLauncher().getClassLoader();
+//        Launcher.getLauncher().getClassLoader();
         ClassLoaderParentTest classLoaderTest = new ClassLoaderParentTest();
         classLoaderTest.getClass().getClassLoader().getParent();
         System.out.println(classLoaderTest.a);
