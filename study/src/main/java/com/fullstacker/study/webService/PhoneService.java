@@ -1,7 +1,8 @@
 package com.fullstacker.study.webService;
 
+import jakarta.xml.ws.Endpoint;
+
 import javax.jws.WebService;
-import javax.xml.ws.Endpoint;
 import java.util.Date;
 
 /**

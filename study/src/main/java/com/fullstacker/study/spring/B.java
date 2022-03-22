@@ -13,7 +13,6 @@ public class B {
 
     @Resource
     private A a;
-
     // Currently In Creation
     public A getA() {
         return a;

@@ -60,8 +60,8 @@ public class RtsSendGoodsReturn implements Serializable {
      * 已经发货的商品数量
      */
 
-    @XStreamAlias("ProductList")
-    private List<Product> productList;
+//    @XStreamAlias("ProductList")
+//    private List<Product> productList;
 
     /**
      * 差异商品信息
