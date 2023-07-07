@@ -7,13 +7,13 @@ package com.fullstacker.study.study.designpattern.singleton;
  * @create 2017-03-27-15:53
  **/
 public class HungrySingleton {
-
+    
     private static HungrySingleton intance = new HungrySingleton();
-
+    
     private HungrySingleton() {
-
+    
     }
-
+    
     public static HungrySingleton getIntance() {
         return intance;
     }

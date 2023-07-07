@@ -11,14 +11,14 @@ import java.util.concurrent.TimeUnit;
  * @create: 2019-05-02 15:32
  */
 public class CyclicBarrierTest {
-
-
+    
+    
     public static void main(String[] args) {
         final CyclicBarrier cyclicBarrier = new CyclicBarrier(7, new Runnable() {
             @Override
             public void run() {
                 System.out.println("人到齐了，准备开会，开会进行中.....");
-
+                
                 try {
                     TimeUnit.SECONDS.sleep(3L);
                 } catch (InterruptedException e) {
@@ -27,7 +27,7 @@ public class CyclicBarrierTest {
                 System.out.println("会议结束，散会，回去干活。。。。");
             }
         });
-
+        
         for (int i = 1; i <= 7; i++) {
             final int finalI = i;
             new Thread(new Runnable() {
@@ -37,7 +37,8 @@ public class CyclicBarrierTest {
                     try {
                         //由于人没到齐，所以提前达到会议室的要等待，线程阻塞
                         int await = cyclicBarrier.await();
-                        System.out.println("await::" + await + ",开完会了。。。" + Thread.currentThread().getName() + "回工位敲代码。。");
+                        System.out.println(
+                                "await::" + await + ",开完会了。。。" + Thread.currentThread().getName() + "回工位敲代码。。");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } catch (BrokenBarrierException e) {

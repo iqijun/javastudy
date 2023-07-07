@@ -13,15 +13,16 @@ public class ClinitTest {
 
     static {
         beforeStaticVar = 10;
-//        System.out.println(beforeStaticVar);
+        //        System.out.println(beforeStaticVar);
         afterStaticVar = 10;  //位于静态块之后的变量可以在静态块中赋值 但不能在静态块中引用
-//        System.out.println(afterStaticVar);  // 编译错误 无法引用在静态块后的变量
+        //        System.out.println(afterStaticVar);  // 编译错误 无法引用在静态块后的变量
     }
 
     //位于静态块之后的变量
     static int afterStaticVar = 1;
 
     static class Parent {
+
         static int varA = 1;
 
         static {
@@ -30,6 +31,7 @@ public class ClinitTest {
     }
 
     static class Sub extends Parent {
+
         static int varB = varA;
 
         static {

@@ -6,7 +6,8 @@ package com.fullstacker.study.course.spi;
  * @author: xgs
  * @create: 2021-09-11 20:58
  */
-public class LogbackLog implements Log{
+public class LogbackLog implements Log {
+    
     @Override
     public void info(String infos) {
         System.out.println("logback implements:" + infos);

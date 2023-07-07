@@ -10,6 +10,7 @@ import com.fullstacker.study.study.designpattern.MasterWorkers.Worker;
  * @create 2017-04-13-18:34
  **/
 public class GradeWorker extends Worker {
+    
     @Override
     public Object handle(Task task) {
         return task.doTask();

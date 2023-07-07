@@ -10,17 +10,21 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 
 public class Server implements Runnable {
+    
     //1 多路复用器（管理所有的通道）
     private Selector seletor;
+    
     //2 建立缓冲区
     private ByteBuffer readBuf = ByteBuffer.allocate(1024);
+    
     //3
     private ByteBuffer writeBuf = ByteBuffer.allocate(1024);
-
+    
     InetSocketAddress address = new InetSocketAddress("127.0.0.1", 8080);
+    
     //声明连接通道
     SocketChannel sc = null;
-
+    
     public Server(int port) {
         try {
             //1 打开路复用器
@@ -33,14 +37,14 @@ public class Server implements Runnable {
             ssc.bind(new InetSocketAddress(port));
             //5 把服务器通道注册到多路复用器上，并且监听阻塞事件
             ssc.register(this.seletor, SelectionKey.OP_ACCEPT);
-
+            
             System.out.println("=========Server start, port==========" + port);
-
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    
     @Override
     public void run() {
         while (true) {
@@ -70,31 +74,31 @@ public class Server implements Runnable {
                             this.write(key); //ssc
                         }
                     }
-
+                    
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
-
+    
     private void write(SelectionKey key) {
-//        try {
-//            //打开通道
-//            sc = SocketChannel.open();
-//            //进行连接
-//            sc.connect(address);
-//			this.sc.write(writeBuf);
-//            System.out.println("client:remoterAddress"+sc.getRemoteAddress().toString()+"::::localAddress:"+sc.getLocalAddress().toString());
-//            writeBuf.clear();
-//			//写完之后就不需要再将socketChannel注册到selector上
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        //        try {
+        //            //打开通道
+        //            sc = SocketChannel.open();
+        //            //进行连接
+        //            sc.connect(address);
+        //			this.sc.write(writeBuf);
+        //            System.out.println("client:remoterAddress"+sc.getRemoteAddress().toString()+"::::localAddress:"+sc.getLocalAddress().toString());
+        //            writeBuf.clear();
+        //			//写完之后就不需要再将socketChannel注册到selector上
+        //        } catch (IOException e) {
+        //            e.printStackTrace();
+        //        }
         System.out.println("do nothing........");
-
+        
     }
-
+    
     private void read(SelectionKey key) {
         try {
             //1 清空缓冲区旧的数据
@@ -118,28 +122,30 @@ public class Server implements Runnable {
             //8 打印结果
             String body = new String(bytes).trim();
             System.out.println("Server : " + body);
-
+            
             // 9..可以写回给客户端数据
             byte[] writeByte = new byte[1024];
             System.out.println("================服务端请求输入========================");
             this.sc = SocketChannel.open();
             //进行连接
             this.sc.connect(address);
-            System.out.println("client:remoterAddress" + this.sc.getRemoteAddress().toString() + "::::localAddress:" + this.sc.getLocalAddress().toString());
-
+            System.out.println(
+                    "client:remoterAddress" + this.sc.getRemoteAddress().toString() + "::::localAddress:" + this.sc
+                            .getLocalAddress().toString());
+            
             System.in.read(writeByte);
             System.out.println("服务端输入内容：" + new String(writeByte));
             writeBuf.put(writeByte);
             writeBuf.flip();
-
+            
             this.sc.write(writeBuf);
             writeBuf.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        
     }
-
+    
     private void accept(SelectionKey key) {
         try {
             //1 获取服务通道
@@ -150,15 +156,15 @@ public class Server implements Runnable {
             sc.configureBlocking(false);
             //4 注册到多路复用器上，并设置读取标识
             sc.register(this.seletor, SelectionKey.OP_READ);
-//            ssc.register(this.seletor, SelectionKey.OP_WRITE);
+            //            ssc.register(this.seletor, SelectionKey.OP_WRITE);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    
     public static void main(String[] args) {
         new Thread(new Server(8765)).start();
     }
-
-
+    
+    
 }

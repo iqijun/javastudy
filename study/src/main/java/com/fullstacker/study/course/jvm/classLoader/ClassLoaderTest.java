@@ -30,11 +30,10 @@ public class ClassLoaderTest {
             }
         };
 
-
         Object obj = myLoader.loadClass("com.fullstacker.study.course.jvm.classLoader.ClassLoaderTest").newInstance();
-        System.out.println("myLoader className: "+ obj.getClass());
+        System.out.println("myLoader className: " + obj.getClass());
         //不同的类加载器加载的类不能用 equals,instaceof 等判断
-        System.out.println("myLoader instanceof : "+ (obj instanceof ClassLoaderTest));
+        System.out.println("myLoader instanceof : " + (obj instanceof ClassLoaderTest));
 
         ClassLoader myLoader2 = new ClassLoader() {
             @Override
@@ -57,10 +56,9 @@ public class ClassLoaderTest {
         };
 
         Object obj2 = myLoader2.loadClass("com.fullstacker.study.course.jvm.classLoader.ClassLoaderTest").newInstance();
-        System.out.println("myLoader2 className: "+ obj2.getClass());
-        System.out.println("myLoader2 instanceof :"+ (obj2 instanceof ClassLoaderTest));
+        System.out.println("myLoader2 className: " + obj2.getClass());
+        System.out.println("myLoader2 instanceof :" + (obj2 instanceof ClassLoaderTest));
     }
-
 
 
 }

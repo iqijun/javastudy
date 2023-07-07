@@ -5,7 +5,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class DynmicProxyTest {
+
     interface IHello {
+
         void sayHello();
     }
 
@@ -23,7 +25,9 @@ public class DynmicProxyTest {
 
         Object bind(Object originalObj) {
             this.originalObj = originalObj;
-            return Proxy.newProxyInstance(originalObj.getClass().getClassLoader(), originalObj.getClass().getInterfaces(), this);
+            return Proxy
+                    .newProxyInstance(originalObj.getClass().getClassLoader(), originalObj.getClass().getInterfaces(),
+                            this);
         }
 
         @Override
@@ -43,7 +47,6 @@ public class DynmicProxyTest {
         DynmicProxyTest.DynamicProxy dynamicProxy = new DynmicProxyTest.DynamicProxy();
 
         DynmicProxyTest.IHello hello = (DynmicProxyTest.IHello) dynamicProxy.bind(new DynmicProxyTest.Hello());
-
 
         hello.sayHello();
 

@@ -10,6 +10,7 @@ import io.netty.util.ReferenceCountUtil;
  * @create 2017-06-09-18:12
  **/
 public class ClientHandler extends ChannelInboundHandlerAdapter {
+    
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         try {
@@ -22,7 +23,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             ReferenceCountUtil.release(msg);
         }
     }
-
+    
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         super.exceptionCaught(ctx, cause);

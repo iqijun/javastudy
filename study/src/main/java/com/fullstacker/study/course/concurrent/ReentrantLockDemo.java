@@ -14,12 +14,17 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 
 class Executions {
+    
     private String flag = "A";//设置一个flag用来标识应该哪条线程执行
+    
     private Lock lock = new ReentrantLock(true);
+    
     private Condition c1 = lock.newCondition();
+    
     private Condition c3 = lock.newCondition();
+    
     private Condition c2 = lock.newCondition();
-
+    
     public void aMethod() {
         lock.lock();
         try {
@@ -39,7 +44,7 @@ class Executions {
             lock.unlock();
         }
     }
-
+    
     public void bMethod() {
         lock.lock();
         try {
@@ -59,7 +64,7 @@ class Executions {
             lock.unlock();
         }
     }
-
+    
     public void cMethod() {
         lock.lock();
         try {
@@ -82,15 +87,16 @@ class Executions {
 }
 
 public class ReentrantLockDemo {
+    
     public static void main(String[] args) {
-
+        
         final Executions executions = new Executions();
         new Thread(new Runnable() {
             @Override
             public void run() {
                 executions.aMethod();
             }
-        }, "Thead_A" ).start();
+        }, "Thead_A").start();
         new Thread(new Runnable() {
             @Override
             public void run() {

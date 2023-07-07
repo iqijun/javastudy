@@ -7,7 +7,7 @@ package com.fullstacker.study.course.concurrent;
  * @create 2017-02-28-11:01
  **/
 public class MutiThread {
-
+    
     public static synchronized void print(String name) throws InterruptedException {
         Integer age;
         if ("Tom".equalsIgnoreCase(name)) {
@@ -20,11 +20,11 @@ public class MutiThread {
         }
         System.out.println("name:" + name + " age:" + age);
     }
-
+    
     public static void main(String[] args) {
         final MutiThread m1 = new MutiThread();
         final MutiThread m2 = new MutiThread();
-
+        
         Thread thread1 = new Thread(new Runnable() {
             public void run() {
                 try {
@@ -34,7 +34,7 @@ public class MutiThread {
                 }
             }
         });
-
+        
         Thread thread2 = new Thread(new Runnable() {
             public void run() {
                 try {

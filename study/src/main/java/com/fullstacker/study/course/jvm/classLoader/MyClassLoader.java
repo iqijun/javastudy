@@ -6,7 +6,7 @@ package com.fullstacker.study.course.jvm.classLoader;
  * @author: xgs
  * @create: 2021-07-16 23:32
  */
-public class MyClassLoader extends ClassLoader{
+public class MyClassLoader extends ClassLoader {
 
     @Override
     protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {

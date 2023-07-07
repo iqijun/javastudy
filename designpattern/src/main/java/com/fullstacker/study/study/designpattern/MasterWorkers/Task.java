@@ -7,7 +7,7 @@ package com.fullstacker.study.study.designpattern.MasterWorkers;
  * @create 2017-04-13-17:27
  **/
 public interface Task {
-
+    
     public abstract Object doTask();
-
+    
 }

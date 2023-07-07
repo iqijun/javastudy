@@ -4,16 +4,16 @@ import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 
 public class Consumer implements Runnable {
-
+    
     private BlockingQueue<Data> queue;
-
+    
     public Consumer(BlockingQueue queue) {
         this.queue = queue;
     }
-
+    
     //随机对象
     private static Random r = new Random();
-
+    
     @Override
     public void run() {
         while (true) {

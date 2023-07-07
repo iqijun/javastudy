@@ -6,18 +6,18 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 
 public class UserProducer extends Thread {
-
+    
     LinkedBlockingQueue<List<User>> linkedUserList;
-
-
+    
+    
     public UserProducer() {
-
+    
     }
-
+    
     public UserProducer(LinkedBlockingQueue<List<User>> linkedUserList) {
         this.linkedUserList = linkedUserList;
     }
-
+    
     @Override
     public void run() {
         List<User> userList = new ArrayList<User>();
@@ -30,12 +30,12 @@ public class UserProducer extends Thread {
                     linkedUserList.put(users);
                     userList.clear();
                 } catch (InterruptedException e) {
-
+                    
                     e.printStackTrace();
                 }
-
+                
             }
         }
-
+        
     }
 }

@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
  * @create 2018-08-21-18:14
  **/
 public class LinkedHashMapTest {
-
+    
     public static void main(String[] args) {
         LinkedHashMap<Object, Object> map = new LinkedHashMap<>();
         String tmp = null;
@@ -17,5 +17,5 @@ public class LinkedHashMapTest {
         System.out.println(str);
         System.out.println(tmp);
     }
-
+    
 }

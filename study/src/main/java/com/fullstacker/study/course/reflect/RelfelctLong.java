@@ -7,7 +7,7 @@ package com.fullstacker.study.course.reflect;
  * @create: 2019-04-01 15:59
  */
 public class RelfelctLong {
-
+    
     public static void main(String[] args) {
         Class<?> classType = null;
         try {
@@ -21,7 +21,7 @@ public class RelfelctLong {
         } catch (InstantiationException e) {
             e.printStackTrace();
         }
-
+        
     }
-
+    
 }

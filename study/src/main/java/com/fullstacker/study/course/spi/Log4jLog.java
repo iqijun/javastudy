@@ -6,7 +6,8 @@ package com.fullstacker.study.course.spi;
  * @author: xgs
  * @create: 2021-09-11 21:11
  */
-public class Log4jLog implements Log{
+public class Log4jLog implements Log {
+    
     @Override
     public void info(String infos) {
         System.out.println("log4j implements::" + infos);

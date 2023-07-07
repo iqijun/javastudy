@@ -11,8 +11,9 @@ import java.lang.reflect.Method;
  * @create 2017-11-08-16:13
  **/
 public class ReflectDemo {
-
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    
+    public static void main(String[] args)
+            throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         Field[] declaredFields = ReflectPo.class.getDeclaredFields();
         for (Field declaredField : declaredFields) {
             System.out.println(declaredField.getName());

@@ -7,9 +7,10 @@ package com.fullstacker.study.course.concurrent;
  * @create 2017-03-01-13:59
  **/
 public class SynchronizedContant {
+    
     int i = 0;
-
-
+    
+    
     public void synchronizedContantMethod() throws InterruptedException {
         String lock = new String("123");
         synchronized (lock) {
@@ -20,11 +21,11 @@ public class SynchronizedContant {
             }
         }
     }
-
+    
     public static void main(String[] args) {
         final SynchronizedContant synchronizedContant1 = new SynchronizedContant();
         final SynchronizedContant synchronizedContant2 = new SynchronizedContant();
-
+        
         Thread thread1 = new Thread(new Runnable() {
             public void run() {
                 try {

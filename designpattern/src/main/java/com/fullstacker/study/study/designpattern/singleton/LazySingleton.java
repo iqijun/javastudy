@@ -7,12 +7,13 @@ package com.fullstacker.study.study.designpattern.singleton;
  * @create 2017-03-27-15:58
  **/
 public class LazySingleton {
+    
     private static LazySingleton intance;
-
+    
     private LazySingleton() {
-
+    
     }
-
+    
     /**
      * <p>功能描述：判断是否存在存在实例，如果不存在则，创建对象
      * 此时，否则返回实例，为线程不安全</p>
@@ -29,7 +30,7 @@ public class LazySingleton {
         }
         return intance;
     }
-
+    
     /**
      * <p>功能描述：判断是否存在存在实例，如果不存在则，创建对象
      * 此时，否则返回实例，同步方式获取，但粒度较大，效率较低，可以使用双重判断的方法以优化</p>
@@ -46,5 +47,5 @@ public class LazySingleton {
         }
         return intance;
     }
-
+    
 }

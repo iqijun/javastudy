@@ -4,31 +4,32 @@ package com.fullstacker.study.interview;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 国美面试题，三个线程依次读取字符串中的n个字符，并输出
- * 同PrintThreadTest.java
+ * 国美面试题，三个线程依次读取字符串中的n个字符，并输出 同PrintThreadTest.java
  *
  * @author xgs
  * @create 2017-03-07-10:03
  **/
 public class ReadString {
+    
     /**
      * 读取计数
      */
     private int count = 0;
-
+    
     private String string;
+    
     /**
      * 字符串被读取的次数
      */
     private AtomicInteger readTime = new AtomicInteger(0);
-
+    
     public ReadString(String string) {
         this.string = string;
     }
-
+    
     public ReadString() {
     }
-
+    
     /**
      * <p>功能描述：</p>
      *
@@ -42,36 +43,37 @@ public class ReadString {
     public void read(int readNum) {
         int length = string.length();
         synchronized (string) {
-            System.out.println(Thread.currentThread().getName() + ":" + string.substring(count, count + readNum > length ? length : count + readNum));
+            System.out.println(Thread.currentThread().getName() + ":" + string
+                    .substring(count, count + readNum > length ? length : count + readNum));
             count += readNum;
             readTime.incrementAndGet();
         }
     }
-
+    
     public int getCount() {
         return count;
     }
-
+    
     public void setCount(int count) {
         this.count = count;
     }
-
+    
     public String getString() {
         return string;
     }
-
+    
     public void setString(String string) {
         this.string = string;
     }
-
+    
     public AtomicInteger getReadTime() {
         return readTime;
     }
-
+    
     public void setReadTime(AtomicInteger readTime) {
         this.readTime = readTime;
     }
-
+    
     public static void main(String[] args) {
         String string = "abcdefghijklmnopqrstuvwxyz";
         final ReadString readString = new ReadString(string);
@@ -115,6 +117,6 @@ public class ReadString {
         t2.start();
         t3.start();
     }
-
-
+    
+    
 }

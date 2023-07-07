@@ -11,10 +11,12 @@ import java.util.List;
  * @create 2018-08-14-18:37
  **/
 public class SortUtils {
+
     /**
      * 降序
      */
     public static String DESC = "desc";
+
     /**
      * 升序
      */
@@ -54,8 +56,7 @@ public class SortUtils {
                         Long time2 = ((Date) sortField.get(o2)).getTime();
                         ret = Long.compare(time1, time2);
                     } else {
-                        ret = String.valueOf(sortField.get(o1)).compareTo(
-                                String.valueOf(sortField.get(o2)));
+                        ret = String.valueOf(sortField.get(o1)).compareTo(String.valueOf(sortField.get(o2)));
                     }
                     if (sort != null && sort.toLowerCase().equals(DESC)) {
                         return -ret;

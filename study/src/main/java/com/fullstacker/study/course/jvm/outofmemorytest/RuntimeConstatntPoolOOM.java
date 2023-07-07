@@ -8,6 +8,7 @@ import java.util.Set;
  * @time: 2021/6/20 16:50
  */
 public class RuntimeConstatntPoolOOM {
+
     // GC overhead limit exceeded
     public static void main(String[] args) {
         Set<String> set = new HashSet<>();

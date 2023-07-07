@@ -16,9 +16,13 @@ import java.util.Scanner;
  * @create 2017-05-24-10:21
  **/
 public class Client {
+
     private Selector selector;
+
     private SocketChannel socketchannel;
+
     private String hostIp;
+
     private int port;
 
     /**
@@ -35,7 +39,7 @@ public class Client {
         selector = Selector.open();
 
         initializeClient();
-//        initializeServe(8887);
+        //        initializeServe(8887);
     }
 
     public void initializeServe(int port) throws IOException {
@@ -62,29 +66,29 @@ public class Client {
         socketchannel.configureBlocking(false);
         socketchannel.register(selector, SelectionKey.OP_READ);
         //启动读线程
-//        Runnable runnable = new Runnable() {
-//            Handle handle = new Handle();
-//            @Override
-//            public void run() {
-//
-//                try {
-//                    while(selector.select()>0){
-//                        for(SelectionKey key:selector.selectedKeys()){
-//                            if(key.isReadable()){
-//                                handle.read(key);
-//                                //删除正在处理的selectionkey
-//                                selector.selectedKeys().remove(key);
-//                            }
-//
-//                        }
-//
-//                    }
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        };
-//        new Thread(runnable).start();
+        //        Runnable runnable = new Runnable() {
+        //            Handle handle = new Handle();
+        //            @Override
+        //            public void run() {
+        //
+        //                try {
+        //                    while(selector.select()>0){
+        //                        for(SelectionKey key:selector.selectedKeys()){
+        //                            if(key.isReadable()){
+        //                                handle.read(key);
+        //                                //删除正在处理的selectionkey
+        //                                selector.selectedKeys().remove(key);
+        //                            }
+        //
+        //                        }
+        //
+        //                    }
+        //                } catch (IOException e) {
+        //                    e.printStackTrace();
+        //                }
+        //            }
+        //        };
+        //        new Thread(runnable).start();
     }
 
     public void sendMsg(String message) throws IOException {

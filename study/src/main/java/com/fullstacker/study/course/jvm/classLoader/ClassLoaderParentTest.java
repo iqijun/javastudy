@@ -9,15 +9,17 @@ package com.fullstacker.study.course.jvm.classLoader;
  * @create: 2021-07-14 16:59
  */
 public class ClassLoaderParentTest {
+
     // 在类加载阶段被初始化为0
-    static int a ;
+    static int a;
+
     // 在创建实例是被初始化为0
     int b;
 
     public static void main(String[] args) {
 
-//        ClassLoader classLoader = new ClassLoader();
-//        Launcher.getLauncher().getClassLoader();
+        //        ClassLoader classLoader = new ClassLoader();
+        //        Launcher.getLauncher().getClassLoader();
         ClassLoaderParentTest classLoaderTest = new ClassLoaderParentTest();
         classLoaderTest.getClass().getClassLoader().getParent();
         System.out.println(classLoaderTest.a);

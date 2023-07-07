@@ -22,7 +22,7 @@ public class Handle {
             sc.configureBlocking(false);
             //4 注册到多路复用器上，并设置读取标识
             sc.register(key.selector(), SelectionKey.OP_READ);
-//            ssc.register(this.seletor, SelectionKey.OP_WRITE);
+            //            ssc.register(this.seletor, SelectionKey.OP_WRITE);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -9,7 +9,7 @@ package com.fullstacker.study.course.thread;
  * @since <pre>���� 3, 2017</pre>
  */
 public class MutiThreadTest {
-
+    
     public static void main(String[] args) throws Exception {
         int i = 0;
         while (i < 10) {
@@ -25,5 +25,5 @@ public class MutiThreadTest {
             }
         }
     }
-
+    
 } 

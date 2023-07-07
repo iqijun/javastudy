@@ -43,7 +43,6 @@ public class TestBuffer {
          System.out.println(buf2);
          */
 
-
         // 3 其他方法
         /**
          IntBuffer buf1 = IntBuffer.allocate(10);

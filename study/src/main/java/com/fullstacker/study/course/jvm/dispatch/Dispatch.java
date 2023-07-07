@@ -8,23 +8,32 @@ package com.fullstacker.study.course.jvm.dispatch;
  */
 public class Dispatch {
 
-    static class  QQ{}
-    static class _360{}
-    public static class Father{
-        public void hardChoice(QQ qq){
+    static class QQ {
+
+    }
+
+    static class _360 {
+
+    }
+
+    public static class Father {
+
+        public void hardChoice(QQ qq) {
             System.out.println("father choose qq");
         }
 
-        public void hardChoice(_360 _360arg){
+        public void hardChoice(_360 _360arg) {
             System.out.println("father choose 360");
         }
     }
-    public static class Son extends Father{
-        public void hardChoice(QQ qq){
+
+    public static class Son extends Father {
+
+        public void hardChoice(QQ qq) {
             System.out.println("Son choose qq");
         }
 
-        public void hardChoice(_360 _360arg){
+        public void hardChoice(_360 _360arg) {
             System.out.println("Son choose 360");
         }
     }

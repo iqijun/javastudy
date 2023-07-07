@@ -7,13 +7,13 @@ package com.fullstacker.study.interview.extendsTest;
  * @create: 2021-04-04 16:51
  */
 public class Parent {
-
-    private  String  firstName;
-
+    
+    private String firstName;
+    
     private String lastName;
-
-    private int  age;
-
+    
+    private int age;
+    
     public Parent(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;

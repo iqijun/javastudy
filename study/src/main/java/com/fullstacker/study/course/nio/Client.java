@@ -11,21 +11,22 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class Client implements Runnable {
-
+    
     //1 多路复用器（管理所有的通道）
     private Selector seletor;
-
+    
     InetSocketAddress address = new InetSocketAddress("127.0.0.1", 8765);
+    
     ;
-
+    
     //声明连接通道
     SocketChannel sc = null;
-
+    
     //建立缓冲区
     ByteBuffer writeBuf = ByteBuffer.allocate(1024);
-
+    
     ByteBuffer readBuf = ByteBuffer.allocate(1024);
-
+    
     public Client(int port) {
         //创建连接的地址
         try {
@@ -38,14 +39,14 @@ public class Client implements Runnable {
             ssc.bind(new InetSocketAddress(port));
             //5 把服务器通道注册到多路复用器上，并且监听阻塞事件
             ssc.register(this.seletor, SelectionKey.OP_ACCEPT);
-
+            
             System.out.println("=========client Server start, port==========" + port);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        
     }
-
+    
     @Override
     public void run() {
         try {
@@ -58,22 +59,23 @@ public class Client implements Runnable {
         }
         while (true) {
             try {
-
+                
                 //定义一个字节数组，然后使用系统录入功能：
                 byte[] bytes = new byte[1024];
                 System.out.println("===========客户端请求输入===================");
                 System.in.read(bytes);
-
+                
                 //把数据放到缓冲区中
                 writeBuf.put(bytes);
                 //对缓冲区进行复位
                 writeBuf.flip();
                 //写出数据
                 sc.write(writeBuf);
-                System.out.println("client:remoterAddress" + sc.getRemoteAddress().toString() + "::::localAddress:" + sc.getLocalAddress().toString());
+                System.out.println("client:remoterAddress" + sc.getRemoteAddress().toString() + "::::localAddress:" + sc
+                        .getLocalAddress().toString());
                 //清空缓冲区数据
                 writeBuf.clear();
-
+                
                 System.out.println("============客户端读取信息=================");
                 this.seletor.select();
                 Set<SelectionKey> selectionKeys = this.seletor.selectedKeys();
@@ -93,7 +95,7 @@ public class Client implements Runnable {
                         this.write(key); //ssc
                     }
                 }
-
+                
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
@@ -107,13 +109,13 @@ public class Client implements Runnable {
             }
         }
     }
-
+    
     public static void main(String[] args) {
-
+        
         new Thread(new Client(8080)).start();
     }
-
-
+    
+    
     private void write(SelectionKey key) {
         try {
             SocketChannel sc = (SocketChannel) key.channel();
@@ -123,9 +125,9 @@ public class Client implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        
     }
-
+    
     private void read(SelectionKey key) {
         try {
             //1 清空缓冲区旧的数据
@@ -149,14 +151,14 @@ public class Client implements Runnable {
             //8 打印结果
             String body = new String(bytes).trim();
             System.out.println("client : " + body);
-
-
+            
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        
     }
-
+    
     private void accept(SelectionKey key) {
         try {
             //1 获取服务通道
@@ -167,7 +169,7 @@ public class Client implements Runnable {
             sc.configureBlocking(false);
             //4 注册到多路复用器上，并设置读取标识
             sc.register(this.seletor, SelectionKey.OP_READ);
-//            ssc.register(this.seletor, SelectionKey.OP_WRITE);
+            //            ssc.register(this.seletor, SelectionKey.OP_WRITE);
         } catch (IOException e) {
             e.printStackTrace();
         }

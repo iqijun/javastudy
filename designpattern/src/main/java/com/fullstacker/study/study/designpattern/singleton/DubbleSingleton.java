@@ -7,12 +7,13 @@ package com.fullstacker.study.study.designpattern.singleton;
  * @create 2017-03-27-16:06
  **/
 public class DubbleSingleton {
+    
     private static DubbleSingleton intance;
-
+    
     private DubbleSingleton() {
-
+    
     }
-
+    
     /**
      * <p>功能描述：判断是否存在存在实例，如果不存在则，创建对象
      * 此时，否则返回实例，为线程不安全</p>
@@ -42,5 +43,5 @@ public class DubbleSingleton {
         }
         return intance;
     }
-
+    
 }

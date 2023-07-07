@@ -9,8 +9,8 @@ import java.util.Date;
  * @create 2018-09-21-15:20
  **/
 public class MillisecondToHour {
-
-
+    
+    
     public static void main(String[] args) {
                 /*
                     错误代码 ms值超过24小时时错误
@@ -19,17 +19,16 @@ public class MillisecondToHour {
                     formatter.setTimeZone(TimeZone.getTimeZone("GMT+00:00"));
                     String hms = formatter.format(ms);
                     System.out.println(hms);*/
-
+        
         MillisecondToHour millisecondToHour = new MillisecondToHour();
         String s = millisecondToHour.formatDuring(100000);
-
+        
         System.out.println(s);
-
-
+        
+        
     }
-
+    
     /**
-             *
      * @param mss 要转换的毫秒数
      * @return 该毫秒数转换为 * days * hours * minutes * seconds 后的格式
      * @author fy.zhang
@@ -39,12 +38,10 @@ public class MillisecondToHour {
         long hours = (mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
         long minutes = (mss % (1000 * 60 * 60)) / (1000 * 60);
         long seconds = (mss % (1000 * 60)) / 1000;
-        return days + " days " + hours + " hours " + minutes + " minutes "
-                + seconds + " seconds ";
+        return days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ";
     }
-
+    
     /**
-             *
      * @param begin 时间段的开始
      * @param end   时间段的结束
      * @return 输入的两个Date类型数据之间的时间间格用* days * hours * minutes * seconds的格式展示
@@ -53,6 +50,6 @@ public class MillisecondToHour {
     public static String formatDuring(Date begin, Date end) {
         return formatDuring(end.getTime() - begin.getTime());
     }
-
-
+    
+    
 }

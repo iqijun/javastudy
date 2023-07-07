@@ -14,9 +14,10 @@ import java.util.Random;
  * @create 2017-04-13-18:39
  **/
 public class Test {
+    
     public static void main(String[] args) {
         Worker worker = new GradeWorker();
-
+        
         Master master = new Master(worker, Runtime.getRuntime().availableProcessors());
         Random rundom = new Random();
         for (int i = 0; i < 4; i++) {

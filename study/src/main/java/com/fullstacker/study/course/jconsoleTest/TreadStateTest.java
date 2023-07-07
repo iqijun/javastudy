@@ -13,8 +13,8 @@ import java.io.InputStreamReader;
  * @create 2018-09-26-17:05
  **/
 public class TreadStateTest {
-
-
+    
+    
     /**
      * 线程死循环演示
      */
@@ -22,15 +22,15 @@ public class TreadStateTest {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-
+                
                 while (true) {
-
+                
                 }
             }
         }, "testBusyThread");
         thread.start();
     }
-
+    
     /**
      * 线程锁等待演示
      *
@@ -51,7 +51,7 @@ public class TreadStateTest {
         }, "testLockThread");
         thread.start();
     }
-
+    
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         bufferedReader.readLine();
@@ -59,8 +59,8 @@ public class TreadStateTest {
         bufferedReader.readLine();
         Object obj = new Object();
         createLockThread(obj);
-
+        
     }
-
-
+    
+    
 }

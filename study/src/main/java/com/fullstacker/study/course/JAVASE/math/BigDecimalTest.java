@@ -7,9 +7,9 @@ import java.math.BigDecimal;
  * @create 2018-09-11-13:27
  **/
 public class BigDecimalTest {
-
+    
     public static void main(String[] args) {
-
+        
         Integer rightQuestionNum = 22;
         Integer allQuestionNum = 45;
         Float rightRate = 0f;
@@ -18,10 +18,11 @@ public class BigDecimalTest {
         BigDecimal rightRateDecimal = bigDecimal.divide(divisor, 2, BigDecimal.ROUND_HALF_UP);
         rightRate = rightRateDecimal.floatValue();
         System.out.println(rightRate);
-
-        BigDecimal bigDecimal1 = new BigDecimal(rightQuestionNum / allQuestionNum.floatValue()).setScale(2, BigDecimal.ROUND_HALF_UP);
+        
+        BigDecimal bigDecimal1 = new BigDecimal(rightQuestionNum / allQuestionNum.floatValue())
+                .setScale(2, BigDecimal.ROUND_HALF_UP);
         System.out.println(bigDecimal1);
-
-
+        
+        
     }
 }

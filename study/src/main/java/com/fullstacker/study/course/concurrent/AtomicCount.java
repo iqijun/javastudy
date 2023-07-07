@@ -9,16 +9,14 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @create 2017-03-14-10:33
  **/
 public class AtomicCount {
-
-
+    
+    
     private static AtomicInteger atomicInteger = new AtomicInteger(0);
-
+    
     /**
      * <p>功能描述：</p>
-     * t1,t2,t3三个线程修改atomicInteger，
-     * 由于AtomicInteger在进行修改操作时会对值“加锁”，所以AtomicInteger可以保持原子性，
-     * 所以在三条线程都进行完修改后，最后的结果为3000，但在三条线程未完全结束时，输出的数字
-     * 不一定。
+     * t1,t2,t3三个线程修改atomicInteger， 由于AtomicInteger在进行修改操作时会对值“加锁”，所以AtomicInteger可以保持原子性，
+     * 所以在三条线程都进行完修改后，最后的结果为3000，但在三条线程未完全结束时，输出的数字 不一定。
      *
      * @param
      * @return
@@ -27,7 +25,7 @@ public class AtomicCount {
      * @since 1.0
      */
     public static void main(String[] args) {
-
+        
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {

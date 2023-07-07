@@ -12,21 +12,23 @@ import org.springframework.stereotype.Component;
  */
 @Component("collectionNameProvider")
 public class CollectionNameProvider {
+    
     public static final String DEFAULT_COLLECTION_NAME = "default_collection";
+    
     private static ThreadLocal<String> typeThreadLocal = new ThreadLocal<>();
-
+    
     public static void setType(String type) {
         typeThreadLocal.set(type);
     }
-
+    
     public String getCollectionName(Object obj) {
-
+        
         SpelExpressionParser parser = new SpelExpressionParser();
         Expression exp = parser.parseExpression("name");
         String name = (String) exp.getValue(obj);
         return "collectTest_";
     }
-
+    
     private String doMapper(String type) {
         //TODO 这里自定义通过Type映射至Mapper的逻辑
         return "TestMongoCollection_1";

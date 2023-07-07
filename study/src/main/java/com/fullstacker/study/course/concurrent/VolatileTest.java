@@ -7,14 +7,14 @@ package com.fullstacker.study.course.concurrent;
  * @create 2017-03-16-15:56
  **/
 public class VolatileTest {
-
+    
     public int count = 0;
-
+    
     public static void main(String[] args) throws InterruptedException {
         VolatileTest volatileTest = new VolatileTest();
         volatileTest.test();
     }
-
+    
     /**
      * <p>功能描述：</p>
      *
@@ -44,26 +44,26 @@ public class VolatileTest {
             Thread.sleep(1000);
             System.out.println(Thread.currentThread().getName() + ":" + count);
         }
-//        Thread t2 = new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                for (int i = 0; i < 1000; i++) {
-//                    count++;
-//                }
-//                System.out.println(Thread.currentThread().getName() + ":" + count);
-//            }
-//        }, "T2");
-//        Thread t3 = new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                for (int i = 0; i < 1000; i++) {
-//                    count++;
-//                }
-//                System.out.println(Thread.currentThread().getName() + ":" + count);
-//            }
-//        }, "T3");
-
-//        t2.start();
-//        t3.start();
+        //        Thread t2 = new Thread(new Runnable() {
+        //            @Override
+        //            public void run() {
+        //                for (int i = 0; i < 1000; i++) {
+        //                    count++;
+        //                }
+        //                System.out.println(Thread.currentThread().getName() + ":" + count);
+        //            }
+        //        }, "T2");
+        //        Thread t3 = new Thread(new Runnable() {
+        //            @Override
+        //            public void run() {
+        //                for (int i = 0; i < 1000; i++) {
+        //                    count++;
+        //                }
+        //                System.out.println(Thread.currentThread().getName() + ":" + count);
+        //            }
+        //        }, "T3");
+        
+        //        t2.start();
+        //        t3.start();
     }
 }

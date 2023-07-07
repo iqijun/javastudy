@@ -13,22 +13,21 @@ import io.netty.channel.socket.nio.NioSocketChannel;
  * @create 2017-06-09-18:12
  **/
 public class Client {
-
+    
     public static void main(String[] args) {
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
             Bootstrap bootstrap = new Bootstrap();
-            bootstrap.group(workerGroup)
-                    .channel(NioSocketChannel.class)
+            bootstrap.group(workerGroup).channel(NioSocketChannel.class)
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(new ClientHandler());
                         }
                     });
-
-//        ChannelFuture channelFuture = bootstrap.bind(8088).sync();
-//        channelFuture.channel().closeFuture().sync();
+            
+            //        ChannelFuture channelFuture = bootstrap.bind(8088).sync();
+            //        channelFuture.channel().closeFuture().sync();
             ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 8088);
             channelFuture.channel().writeAndFlush(Unpooled.wrappedBuffer("tomcat".getBytes()));
             //保持线程

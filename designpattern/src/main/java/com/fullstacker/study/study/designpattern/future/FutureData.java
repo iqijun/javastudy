@@ -2,11 +2,11 @@ package com.fullstacker.study.study.designpattern.future;
 
 
 public class FutureData implements Data {
-
+    
     private RealData realData;
-
+    
     private boolean isReady = false;
-
+    
     public synchronized void setRealData(RealData realData) {
         //如果已经装载完毕了，就直接返回
         if (isReady) {
@@ -18,7 +18,7 @@ public class FutureData implements Data {
         //进行通知
         notify();
     }
-
+    
     @Override
     public synchronized String getRequest() {
         //如果没装载好 程序就一直处于阻塞状态
@@ -32,6 +32,6 @@ public class FutureData implements Data {
         //装载好直接获取数据即可
         return this.realData.getRequest();
     }
-
-
+    
+    
 }

@@ -13,7 +13,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * @create 2017-06-09-18:11
  **/
 public class Serve {
-
+    
     public static void main(String[] args) {
         //创建两个线程组，bossGroup负责网络连接，workerGroup负责具体处理
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();

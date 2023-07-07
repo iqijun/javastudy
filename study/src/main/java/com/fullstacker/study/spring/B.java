@@ -10,14 +10,15 @@ import javax.annotation.Resource;
  */
 @Component
 public class B {
-
+    
     @Resource
     private A a;
+    
     // Currently In Creation
     public A getA() {
         return a;
     }
-
+    
     public void setA(A a) {
         this.a = a;
     }

@@ -7,10 +7,10 @@ package com.fullstacker.study.interview.extendsTest;
  * @create: 2021-04-04 16:55
  */
 public class ExtendsTest {
-
-
-    public static  void main(String[] args){
-     new Son("bill","joy",60);
-     new Object();
+    
+    
+    public static void main(String[] args) {
+        new Son("bill", "joy", 60);
+        new Object();
     }
 }

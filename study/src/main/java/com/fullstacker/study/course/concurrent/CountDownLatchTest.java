@@ -9,7 +9,7 @@ import java.util.concurrent.CountDownLatch;
  * @create: 2019-05-02 15:13
  */
 public class CountDownLatchTest {
-
+    
     public static void main(String[] args) throws InterruptedException {
         final CountDownLatch countDownLatch = new CountDownLatch(10);
         for (int i = 0; i < 10; i++) {
@@ -26,6 +26,6 @@ public class CountDownLatchTest {
         //阻塞线程
         countDownLatch.await();
         System.out.println("执行完毕");
-
+        
     }
 }

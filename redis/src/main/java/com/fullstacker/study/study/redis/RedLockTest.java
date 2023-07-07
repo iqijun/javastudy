@@ -15,7 +15,7 @@ public class RedLockTest {
 
     public static void main(String[] args) {
         Config config = new Config();
-        RedissonClient redisson =  Redisson.create(config);
+        RedissonClient redisson = Redisson.create(config);
         RLock lock = redisson.getLock("");
         lock.tryLock();
     }

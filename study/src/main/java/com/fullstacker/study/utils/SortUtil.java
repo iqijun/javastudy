@@ -16,9 +16,12 @@ public class SortUtil<E> {
                     Method m1 = ((E) a).getClass().getMethod(method, null);
                     Method m2 = ((E) b).getClass().getMethod(method, null);
                     if (sort != null && "desc".equalsIgnoreCase(sort))//倒序
+                    {
                         ret = m2.invoke(((E) b), null).toString().compareTo(m1.invoke(((E) a), null).toString());
-                    else//正序
+                    } else//正序
+                    {
                         ret = m1.invoke(((E) a), null).toString().compareTo(m2.invoke(((E) b), null).toString());
+                    }
                 } catch (NoSuchMethodException ne) {
                     System.out.println(ne);
                 } catch (IllegalAccessException ie) {

@@ -8,21 +8,25 @@ package com.fullstacker.study.course.jvm.dispatch;
  */
 public class DynmicDispatchTest {
 
-   static class Father{
+    static class Father {
+
         int money = 1;
+
         static int static_field = 10;
-        public Father(){
+
+        public Father() {
             money = 2;
-            System.out.println(" father money:"+  money);
+            System.out.println(" father money:" + money);
         }
     }
 
-    static class  Son extends Father{
+    static class Son extends Father {
+
         int money = 3;
 
-        public Son(){
+        public Son() {
             money = 4;
-            System.out.println(" son money:"+ money);
+            System.out.println(" son money:" + money);
         }
     }
 

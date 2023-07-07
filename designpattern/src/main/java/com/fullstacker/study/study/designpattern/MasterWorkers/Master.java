@@ -12,19 +12,22 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * @create 2017-04-13-17:21
  **/
 public class Master {
+    
     /**
      * 用来保存任务,由于会涉及多线程共同处理任务所以使用concurrent包
      */
     private ConcurrentLinkedQueue<Task> tasks = new ConcurrentLinkedQueue<Task>();
+    
     /**
      * 保存结果 由于会涉及多线程共同处理任务所以使用concurrent包
      */
     private Map<String, Object> resultMap = new ConcurrentHashMap<String, Object>();
+    
     /**
      * 用来保存workers
      */
     private HashMap<String, Thread> workers = new HashMap<String, Thread>();
-
+    
     /**
      * <p>功能描述：构造函数，指定work和work数量</p>
      *
@@ -42,7 +45,7 @@ public class Master {
             workers.put(workName, new Thread(worker, workName));
         }
     }
-
+    
     /**
      * <p>功能描述：提交任务</p>
      *
@@ -55,7 +58,7 @@ public class Master {
     public void submitTask(Task task) {
         tasks.add(task);
     }
-
+    
     /**
      * <p>功能描述：master调用work执行任务</p>
      *
@@ -70,7 +73,7 @@ public class Master {
             entry.getValue().start();
         }
     }
-
+    
     /**
      * <p>功能描述：判断任务是否执行完</p>
      *
@@ -89,7 +92,7 @@ public class Master {
         }
         return true;
     }
-
+    
     /**
      * <p>功能描述：返回结果集</p>
      *

@@ -7,23 +7,27 @@ import java.lang.invoke.MethodType;
 public class DynmicInvokeTest {
 
     class GrandFather {
+
         void print(String str) {
             System.out.println("I am GrandFather");
         }
     }
 
     class Father extends GrandFather {
+
         void print() {
             System.out.println("I am Father");
         }
     }
 
     class Son extends Father {
+
         void print() {
             //在此处实现调用GrandFather类中print方法
             MethodType mt = MethodType.methodType(void.class, String.class);
             try {
-                MethodHandle methodHandle = MethodHandles.lookup().findSpecial(GrandFather.class, "print", mt, getClass());
+                MethodHandle methodHandle = MethodHandles.lookup()
+                        .findSpecial(GrandFather.class, "print", mt, getClass());
                 methodHandle.invoke(this, "sss");
             } catch (NoSuchMethodException e) {
                 e.printStackTrace();

@@ -7,7 +7,7 @@ package com.fullstacker.study.course.JAVASE.boxandunbox;
  * @create: 2021-07-28 16:55
  */
 public class BoxingTest {
-
+    
     public static void main(String[] args) {
         Integer a = 1;
         Integer b = 2;
@@ -17,7 +17,7 @@ public class BoxingTest {
         Integer f = 321;
         Long g = 3L;
         System.out.println(c == d);
-        System.out.println(e == f );
+        System.out.println(e == f);
         System.out.println(c == (a + b));
         System.out.println(c.equals(a + b));
         System.out.println(g == (a + b)); // �Զ���װ�䣨long��(a+b)

@@ -7,7 +7,7 @@ package com.fullstacker.study.course.JAVASE.math;
  * @create: 2021-07-13 15:53
  */
 public class InfiniteTest {
-
+    
     public static void main(String[] args) {
         System.out.println(Float.NEGATIVE_INFINITY);
         System.out.println(Float.POSITIVE_INFINITY);

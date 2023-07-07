@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TestCollectionServiceImpl implements TestCollectionService {
-
+    
     @Autowired(required = false)
     private MongoTemplate mongoTemplate;
-
+    
     @Override
     public TestMongoCollection save(TestMongoCollection po) {
         mongoTemplate.save(po);

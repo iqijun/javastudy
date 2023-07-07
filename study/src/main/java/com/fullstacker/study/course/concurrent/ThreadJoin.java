@@ -7,6 +7,7 @@ package com.fullstacker.study.course.concurrent;
  * @create 2017-03-24-14:22
  **/
 public class ThreadJoin {
+    
     /**
      * <p>功能描述：在执行thread2过程中，调用thread1.join()方法后，thread2线程暂停，
      * 而后thread1继续执行，待thread1执行完毕thread2继续执行</p>
@@ -18,7 +19,7 @@ public class ThreadJoin {
      * @since 1.0
      */
     public static void main(String[] args) {
-
+        
         final Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -52,5 +53,5 @@ public class ThreadJoin {
         }, "t2");
         thread2.start();
     }
-
+    
 }

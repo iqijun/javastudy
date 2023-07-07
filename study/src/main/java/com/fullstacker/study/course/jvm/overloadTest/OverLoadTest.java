@@ -15,14 +15,13 @@ public class OverLoadTest {
      * 当有相同的返回类型时，由于泛型擦除后，参数列表时相同的，所以sameReturnType这两个方法不能构成重载
      */
 
-
-//    public void sameReturnType(List<String> strList){
-//        System.out.println("strList Method");
-//    }
-//
-//    public void sameReturnType(List<Integer> strList){
-//        System.out.println("strList Method");
-//    }
+    //    public void sameReturnType(List<String> strList){
+    //        System.out.println("strList Method");
+    //    }
+    //
+    //    public void sameReturnType(List<Integer> strList){
+    //        System.out.println("strList Method");
+    //    }
 
 
    /* public static String diffReturnType(List<String> strList){

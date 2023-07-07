@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @WebService
 public class PhoneService {
-
+    
     public Phone getPhoneInfo(Phone phoneParm) {
         Phone phone = new Phone();
         String name = phoneParm.getName();
@@ -28,13 +28,13 @@ public class PhoneService {
         }
         return phone;
     }
-
+    
     public static void main(String[] args) {
         //WebService发布的地址，端口号和路径随意写，IP地址在实际应用时应该写发布WebService的服务器的地址
         String address = "http://127.0.0.1:7777/wwss/phoneService";
         Endpoint endpoint = Endpoint.publish(address, new PhoneService());
         //这里可以手动停止该服务，但是在实际开发中也不会随意停止
-//        endpoint.stop();
+        //        endpoint.stop();
         System.out.println(address + "?WSDL");
     }
 }

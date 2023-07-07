@@ -5,13 +5,13 @@ package com.fullstacker.study.course.JAVASE.string;
  * @create 2018-09-15-11:35
  **/
 public class StringInternTest {
-
-
+    
+    
     /****
      * @param args
      */
     public static void main(String[] args) {
-
+        
         /***
          *
          * String.intern()注释信息
@@ -47,8 +47,7 @@ public class StringInternTest {
          *
          *
          */
-
-
+        
         /**
          *在定义String变量的时候赋值
          * 1. 如果赋值的是静态的字符串，就会执行进入字符串池的操作,如果池中含有该字符串，则返回引用；
@@ -56,33 +55,31 @@ public class StringInternTest {
          *
          *
          */
-
-
+        
         String a = new String("ab");
         String b = new String("ab");
         String c = "ab";
         String d = "a" + "b";
         String e = "b";
         String f = "a" + e;
-
+        
         System.out.println(b.intern() == a);  //false
         System.out.println(b.intern() == c);  //true
         System.out.println(b.intern() == d);  //true
         System.out.println(b.intern() == f);  //false
         System.out.println(b.intern() == a.intern());//true
         System.out.println(b.intern() == f.intern()); //true
-
+        
         System.out.println("=======================================");
-
-
+        
         String string1 = "abc";
         String string2 = "a" + "bc";
         String string3 = "a" + "b" + "c";
         String string4 = "ab" + "c";
-
+        
         String tmp = "ab";
         String string5 = tmp + "c";
-
+        
         System.out.println(string1 == string2);//true
         System.out.println(string1 == string3);//true
         System.out.println(string1 == string4);//true
@@ -91,16 +88,14 @@ public class StringInternTest {
         System.out.println(string1.intern() == string3.intern());//true
         System.out.println(string1.intern() == string4.intern());//true
         System.out.println(string1.intern() == string5.intern());//true
-
-
+        
         System.out.println("=======================================");
-
-
+        
         StringBuffer sb1 = new StringBuffer();
         sb1.append("计算机").append("软件");
         String str1 = sb1.toString(); //相当于
         System.out.println("str1:" + (str1.intern() == str1)); // jdk7 true
-
+        
         /****
          *  常量池中为什么会有“java”这个字符串呢？
          * 原因是这样的，并没有java字符串常量池中，有默认字符串常量这样的机制。而是其实jvm从启动，
@@ -115,9 +110,9 @@ public class StringInternTest {
         sb2.append("ja").append("va");
         String str2 = sb2.toString(); //相当于new String("java")
         System.out.println("str2:" + (str2.intern() == str2)); // jdk7 false
-
+        
         System.out.println("===========================");
-
+        
         //在创建abc1时，创建了一个堆中的对象，和一个常量池中的对象
         String abc1 = new String("abc");
         //在创建abc2时只创建了一个堆中的对象，不再创建常量池中的对象
@@ -126,7 +121,7 @@ public class StringInternTest {
         System.out.println(abc1.intern() == abc1);
         System.out.println(abc1.intern() == abc2);
         System.out.println(abc1.intern() == abc2.intern());
-
+        
         System.out.println("===========================");
     }
 }

@@ -1,9 +1,9 @@
 package com.fullstacker.study.course.JAVASE.keyword;
 
 public class finalWord {
-
+    
     public static final void main(String[] args) {
-
+        
         String s1 = "finalStr";
         final String s2 = "final";
         String s3 = "final";

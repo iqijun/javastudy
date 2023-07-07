@@ -7,9 +7,9 @@ package com.fullstacker.study.course.concurrent;
  * @create 2017-03-06-18:31
  **/
 public class ChangeLock {
-
+    
     private String lock = "lock";
-
+    
     private void method() {
         synchronized (lock) {
             try {
@@ -23,9 +23,9 @@ public class ChangeLock {
             }
         }
     }
-
+    
     public static void main(String[] args) {
-
+        
         final ChangeLock changeLock = new ChangeLock();
         Thread t1 = new Thread(new Runnable() {
             @Override
@@ -47,5 +47,5 @@ public class ChangeLock {
         }
         t2.start();
     }
-
+    
 }

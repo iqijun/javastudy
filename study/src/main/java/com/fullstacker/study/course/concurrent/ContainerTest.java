@@ -11,12 +11,12 @@ import java.util.concurrent.DelayQueue;
  * @create 2017-03-22-11:04
  **/
 public class ContainerTest {
-
+    
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>();
         CopyOnWriteArrayList copyOnWriteArrayList = new CopyOnWriteArrayList();
         copyOnWriteArrayList.add("ad");
         DelayQueue delayQueue = new DelayQueue();
-
+        
     }
 }

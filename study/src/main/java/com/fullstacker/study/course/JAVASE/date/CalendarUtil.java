@@ -8,7 +8,7 @@ import java.util.Date;
  * @create 2017-07-27-17:55
  **/
 public class CalendarUtil {
-
+    
     private static String getWeekScope(Integer weekOfYear) {
         String str = String.valueOf(weekOfYear);
         String strWeek = str.substring(4);
@@ -24,9 +24,9 @@ public class CalendarUtil {
         Date sunDay = calendar.getTime();
         String sunStr = DateUtil.dateToStr(sunDay, "M/d");
         return monStr + "-" + sunStr;
-
+        
     }
-
+    
     public static void main(String[] args) {
         getWeekScope(201722);
     }
