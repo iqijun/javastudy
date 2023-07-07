@@ -9,7 +9,10 @@
     	 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
     default-lazy-init="false" default-autowire="byName">
     
-    <context:component-scan base-package="com.fullstacker.study.spring"></context:component-scan>
-    <bean name="a" class="com.fullstacker.study.spring.A"></bean>
+    <context:component-scan base-package="com.fullstacker.study.spring"/>
+    <bean name="a" class="com.fullstacker.study.spring.A"/>
 
+    <bean name="parent" class="com.fullstacker.study.annotation.inheritedTest.Parent"/>
+    
+    <bean name="child" class="com.fullstacker.study.annotation.inheritedTest.Child"/>
 </beans>
