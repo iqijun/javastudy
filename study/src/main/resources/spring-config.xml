@@ -11,6 +11,7 @@
     
     <context:component-scan base-package="com.fullstacker.study.spring"/>
     <bean name="a" class="com.fullstacker.study.spring.A"/>
+    
 
     <bean name="parent" class="com.fullstacker.study.annotation.inheritedTest.Parent"/>
     

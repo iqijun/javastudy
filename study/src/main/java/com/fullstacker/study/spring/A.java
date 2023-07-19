@@ -13,6 +13,13 @@ public class A {
     @Resource
     private B b;
     
+    @Resource
+    private A a;
+    
+    public A getA() {
+        return a;
+    }
+    
     public B getB() {
         return b;
     }
